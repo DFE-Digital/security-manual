@@ -1,0 +1,36 @@
+{{ header({
+"showNav": "true",
+"showSearch": "true",
+"showHeaderActionLinks": "true",
+"showUserName": "false",
+"userName": "",
+"userNameURL": "",
+"selectedNav": selectedNav,
+"logoPath": "assets/images",
+"searchInputName": "searchterm",
+"logoAltText": "Department for Education standards manual",
+"homeHref":"https://standards.education.gov.uk",
+"service": {
+"name": serviceName,
+"serviceUrl": "/"
+},
+"headerActionLinks": [
+{ "url": "/support", "label": "Support" }
+],
+"primaryLinks": [
+{
+    "url": "/",
+    "label": "Home"
+},
+{
+"url" : "/secure-by-design",
+"label" : "Secure by design"
+}
+]
+})
+}}
+
+<style>.dfe-header__action-links {
+    margin-bottom: 20px;
+}
+</style>

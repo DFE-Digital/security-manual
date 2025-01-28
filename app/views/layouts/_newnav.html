@@ -1,0 +1,65 @@
+{% set data = [
+    {
+        "nav": "Secure by design",
+        "url": "/standards",
+        "sections": [
+            {
+                "section": "Standard for the publication of accessibility statements",
+                "sub-sections": [
+                    {
+                        "title": "Standard (opens in Find and use a standard)",
+                        "url": "https://standards.education.gov.uk/standard/accessibility-statements"
+                    }
+                ]
+            },{
+                "section": "Accessibility at service assessments",
+                "sub-sections": [
+                    {
+                        "title": "Accessibility specialist assessor role",
+                        "url": "/standards/accessibility-assessor"
+                    }
+                ]
+            }
+        ]
+    }
+] %}
+
+{% set selectedSection = null %}
+
+{% set navSections = [] %}
+
+{% for item in data %}
+    {% if item.nav == selectedNav %}
+        {% set selectedSection = item %}
+        {% set navSections = item.sections %}
+    {% endif %}
+{% endfor %}
+
+<nav class="navbar" aria-label="Secondary navigation">
+    {%- if selectedSection %}
+        <ul class="nav-list">
+
+            <li>
+                <a href="{{selectedSection.url}}" class="nav-link">
+                    {{selectedSection.nav}}
+                </a>
+            </li>
+
+            {% for section in navSections %}
+                <li>
+                    <button type="button" aria-expanded="false" aria-controls="sub-nav-{{ section.section | slugify }}" class="nav-link-toggle">
+                        {{ section.section }}
+                        <span class="icon"></span>
+                    </button>
+                    <ul id="sub-nav-{{ section.section | slugify }}" class="sub-nav">
+                        {% for sub_section in section['sub-sections'] %}
+                            <li>
+                                <a href="{{ sub_section.url }}" class="{% if sub_section.title == pageName %} sub-nav--active {% endif %}">{{ sub_section.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</nav>

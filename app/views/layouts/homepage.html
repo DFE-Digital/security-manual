@@ -1,0 +1,68 @@
+{% from 'header/macro.njk' import header %}
+{% from 'govuk/components/footer/macro.njk' import govukFooter %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+
+  <head>
+    <meta charset="utf-8">
+
+    {% include 'layouts/_head.html' %}
+
+    {% block head %}{% endblock %}
+  </head>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-857GCCCS6K"></script>
+
+  <body class="govuk-template__body ">
+    <script>
+      document.body.className += ' js-enabled' + (
+        'noModule' in HTMLScriptElement.prototype
+        ? ' govuk-frontend-supported'
+        : '');
+    </script>
+
+    {% include 'layouts/_cookiebanner.html'%}
+    <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    {% include 'layouts/_topnav.html'%}
+    {% include 'layouts/_services.html'%}
+
+    {% block header %}
+
+      {% include 'layouts/_header.html'%}
+
+    {% endblock %}
+
+    {% block hero %}{% endblock %}
+
+    {% block main %}
+
+      <main class="govuk-main-wrapper {{mainClasses}}" id="main-content" role="main">
+
+        {% block content %}{% endblock %}
+
+      </main>
+    </div>
+  {% endblock %}
+
+</div>
+
+{% block footer %}
+  {% include 'layouts/_footer.html'%}
+{% endblock %}
+
+<script src="/assets/js/all.min.js"></script>
+<script src="/assets/js/cookies.min.js"></script>
+<script src="/assets/js/feedback.min.js"></script>
+<script src="/assets/js/dfefrontend.min.js"></script>
+{% block scripts %}{% endblock %}
+<script type="module" src="/assets/js/govuk/all.bundle.min.js"></script>
+<script type="module">
+  import {initAll} from '/assets/js/govuk/all.bundle.min.js'
+  initAll()
+</script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by design" %}
+{% set pageName = "Secure by design" %}
+{% set seoPageName = "Secure by design" %}
+{% set pageDescription = ""%}
+
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <h2 class="govuk-heading-l">Header</h2>
+                <p>Content</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

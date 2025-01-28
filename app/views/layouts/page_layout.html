@@ -1,0 +1,152 @@
+{% from 'header/macro.njk' import header %}
+{% from 'govuk/components/footer/macro.njk' import govukFooter %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+
+    <head>
+    <meta charset="utf-8">
+
+    {% include 'layouts/_head.html' %}
+
+    {% block head %}{% endblock %}
+  </head>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Add the 'js-enabled' class to the <html> element
+        document
+          .documentElement
+          .classList
+          .add('js-enabled');
+
+        const navLinks = document.querySelectorAll('.nav-link-toggle');
+        const currentPageUrl = window.location.pathname; // Get current page path
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behaviour
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            const subNavId = this.getAttribute('aria-controls');
+            const subNav = document.getElementById(subNavId);
+            if (subNav) {
+              subNav.style.display = expanded
+                ? 'none'
+                : 'block';
+            }
+          });
+
+          // Check if the current page URL matches any sub-navigation link
+          const subNavId = link.getAttribute('aria-controls');
+          const subNav = document.getElementById(subNavId);
+          if (subNav) {
+            const subNavLinks = subNav.querySelectorAll('a');
+            subNavLinks.forEach(subNavLink => {
+              if (subNavLink.getAttribute('href') === currentPageUrl) {
+                // Mark the link as active
+                subNavLink
+                  .classList
+                  .add('sub-nav--active');
+                // Expand the parent link and show the sub-navigation
+                link.setAttribute('aria-expanded', 'true');
+                subNav.style.display = 'block';
+              }
+            });
+          }
+        });
+      });
+    </script>
+
+    <body class="govuk-template__body">
+      <script>
+        document.body.className += ' js-enabled' + (
+          'noModule' in HTMLScriptElement.prototype
+          ? ' govuk-frontend-supported'
+          : '');
+      </script>
+
+      {% include 'layouts/_cookiebanner.html'%}
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+      {% include 'layouts/_topnav_new.html'%}
+      {% include 'layouts/_services.html'%}
+
+      {% block header %}
+        {% include 'layouts/_header.html'%}
+      {% endblock %}
+
+      {% block main %}
+        <main class="govuk-main-wrapper govuk-!-padding-0" id="main-content" role="main">
+          
+          <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-quarter govuk-!-padding-top-7 sticky">
+                {% block newNav%}
+                  {% include "layouts/_newnav.html" %}{% endblock%}
+                </div>
+
+                <div class="govuk-grid-column-three-quarters govuk-!-padding-top-6">
+                  {% block content %}{% endblock %}
+                  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-9">
+                  <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">Information about this page</span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Created</dt>
+                          <dd class="govuk-summary-list__value">{{created}}</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Last reviewed</dt>
+                          <dd class="govuk-summary-list__value">{{reviewed}}</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Last updated</dt>
+                          <dd class="govuk-summary-list__value">{{updated}}</dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Reason this page exists</dt>
+                          <dd class="govuk-summary-list__value">{{need}}</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Suggest a change or comment</dt>
+                          <dd class="govuk-summary-list__value">
+                            <a href="https://github.com/DFE-Digital/accessibility-manual/issues/{{githubIssueID}}">Issue
+                      {{githubIssueID}}</a>
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </details>
+
+                </div>
+              </div>
+            </main>
+          {% endblock %}
+
+          {% block footer %}
+            {% include 'layouts/_footer.html'%}
+          {% endblock %}
+
+          <script src="/assets/js/all.min.js"></script>
+          <script src="/assets/js/cookies.min.js"></script>
+          <script src="/assets/js/feedback.min.js"></script>
+          <script src="/assets/js/dfefrontend.min.js"></script>
+          <script>
+            hljs.highlightAll();
+          </script>
+          {% block scripts %}{% endblock %}
+          <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
+          <script type="module">
+            import {initAll} from '/assets/js/govuk-frontend.min.min.js';
+            initAll();
+          </script>
+
+        </body>
+
+      </html>

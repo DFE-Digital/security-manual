@@ -1,0 +1,32 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Home" %}
+{% set pageName = "Homepage" %}
+{% set pageDescription = "Security in the Department for Education."%}
+
+{% block content %}
+
+    <section class="govuk-!-padding-bottom-9 govuk-!-margin-top-0">
+        <div class="govuk-width-container">
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-l">Header</h2>
+                    <p class="govuk-body-l">Some content.</p>
+                    <div class="dfe-grid-container govuk-!-margin-top-9">
+
+                        <div class="dfe-card">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                    <a href="/secure-by-design" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Secure by design</a>
+                                </h3>
+                                <p>Content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
