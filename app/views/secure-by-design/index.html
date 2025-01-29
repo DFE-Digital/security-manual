@@ -1,20 +1,33 @@
 {% extends "layouts/full.html" %}
 
-{% set selectedNav = "Secure by design" %}
-{% set pageName = "Secure by design" %}
-{% set seoPageName = "Secure by design" %}
-{% set pageDescription = ""%}
-
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Secure by Design" %}
+{% set seoPageName = "Secure by Design" %}
+{% set pageDescription = "What DfE delivery teams and security professionals need to do to incorporate effective cyber security practices when building digital services and technical infrastructure."%}
 {% block content %}
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
-
-            <div class="govuk-grid-column-one-quarter">
-                {% include "includes/_side-nav.html"%}
-            </div>
-            <div class="govuk-grid-column-three-quarters">
-                <h2 class="govuk-heading-l">Header</h2>
-                <p>Content</p>
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body-l">Secure by Design has been developed by the Central Digital and Data Office (CDDO) and a cross-government working group in collaboration with the Government Security Group, National Cyber Security Centre (NCSC) and industry experts.</p>
+                <div class="dfe-grid-container govuk-!-margin-top-9">
+    
+                    <div class="dfe-card">
+                        <div class="dfe-card-container">
+                            <h3 class="govuk-heading-m">
+                                <a href="secure-by-design/what-is-secure-by-design" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">What is Secure by Design?</a>
+                            </h3>
+                            <p>Find out more about what Secure by Design means for DfE.</p>
+                        </div>
+                    </div>
+                    <div class="dfe-card">
+                        <div class="dfe-card-container">
+                            <h3 class="govuk-heading-m">
+                                <a href="secure-by-design/dfe-team-roles-and-responsibilities" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Roles and responsibilities</a>
+                            </h3>
+                            <p>What teams need to do to be Secure by Design.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

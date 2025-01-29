@@ -1,0 +1,40 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Roles and responsibilities of the Cyber and Information Security Division" %}
+{% set seoPageName = "Roles and responsibilities of the Cyber and Information Security Division" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">Roles and responsibilities of the Cyber and Information Security Division</h1>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav-overview.html"%}
+                {% include "includes/_side-nav-roles.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <p>The Cyber and Information Security Division (CISD) within DfE are responsible for ensuring the cyber security and resilience of DfE's data and technology infrastructure. Cyber security information provided by project or operational teams is a significant contributor towards this.</p>
+                <p>Our key responsibilities include:</p>
+                <ul>
+                    <li>monitoring and reporting on DfE Secure by Design posture</li>
+                    <li>managing DfE organisational cyber security risk</li>
+                    <li>providing guidance on organisational cyber security policies and standards</li>
+                    <li>supporting DfE delivery teams with adopting Secure by Design</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

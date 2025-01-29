@@ -1,0 +1,42 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "What is the goal of Secure by Design?" %}
+{% set seoPageName = "What is the goal of Secure by Design?" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">What is the goal of Secure by Design?</h1>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav-overview.html"%}
+                {% include "includes/_side-nav-roles.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <p>The aim of Secure by Design is to ensure effective cyber security measures are built into government systems and services from the start.</p>
+
+                <p>This approach provides:
+                <ul>
+                    <li>risk driven <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/">activities</a> for building appropriate and proportionate cyber security controls within digital services</li>
+                    <li>clarity on roles and responsibilities to manage security risks and improve security culture</li>
+                    <li>practical guidance and tools to achieve the <a href="https://www.security.gov.uk/policy-and-guidance/govassure/components-of-the-caf/">Cyber Assessment Framework (CAF)</a> outcomes as part of <a href="https://www.security.gov.uk/policy-and-guidance/govassure/">GovAssure</a></li>
+                </ul>
+                </p>
+                <p>Read the Secure by Design <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/principles/">principles</a> and <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/policy/">policy</a> to find out more.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

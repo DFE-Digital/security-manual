@@ -1,0 +1,34 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "What is Secure by Design?" %}
+{% set seoPageName = "What is the key concept of Secure by Design?" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">What is Secure by Design?</h1>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav-overview.html"%}
+                {% include "includes/_side-nav-roles.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <p><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/principles/">Secure by Design</a> is a cross-government approach that sets out what delivery teams and security professionals need to do to incorporate effective cyber security practices into digital delivery.</p>
+                <p>It is mandatory for government departments and arm’s length bodies (ALBs).</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

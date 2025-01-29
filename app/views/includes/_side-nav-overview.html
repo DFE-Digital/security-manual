@@ -1,17 +1,25 @@
 
 {% set secure_by_design = [
   {
-    title: "Overview",
-    url: "/secure-by-design"
+    title: "What is Secure by Design?",
+    url: "/secure-by-design/what-is-secure-by-design"
+  },
+  {
+    title: "What is the goal of Secure by Design?",
+    url: "/secure-by-design/goal-of-secure-by-design"
+  },
+  {
+    title: "What does Secure by Design mean for DfE?",
+    url: "/secure-by-design/secure-by-design-for-dfe"
   }
 ] %}
 
 
-
 <nav class="dfe-vertical-nav">
 
-  {%- if selectedNav === "Secure by design" %}
+  {%- if selectedNav === "Secure by Design" %}
     <ul class="dfe-vertical-nav__section">
+      <h2 class="dfe-vertical-nav--section-header">Overview</h2>
       {% for item in secure_by_design %}
         <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
           <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
