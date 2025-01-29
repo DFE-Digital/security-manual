@@ -206,7 +206,15 @@ a:visited {
 }
 
 
+.manual-promo-strip {
+  padding: 20px 0;
+  background: #f2f7fc;
+}
 
+.manual-promo-strip p {
+  margin-bottom: 0;
+  max-width: 100%;
+}
 
 .dfe-content-page--header {
   background: tint($color_dfe-secondary-blue, 90%)
