@@ -12,6 +12,16 @@
             <div class="govuk-grid-column-two-thirds">
                 <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
                 <h1 class="govuk-heading-xl  govuk-!-margin-top-5">Roles and responsibilities of the Cyber and Information Security Division</h1>
+                <nav class="app-sub-navigation" arial-label="Application menu">
+                    <ul class="app-sub-navigation__list">
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" aria-current="page" href="/secure-by-design/">Overview</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/secure-by-design/support">Support</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -20,7 +30,7 @@
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
+                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
             </div>
         </div>
     </div>
@@ -33,15 +43,20 @@
             <div class="govuk-grid-column-one-quarter">
                 {% include "includes/_side-nav-overview.html"%}
                 {% include "includes/_side-nav-roles.html"%}
+                {% include "includes/_side-nav-self-assessment.html"%}
             </div>
             <div class="govuk-grid-column-three-quarters">
-                <p>The Cyber and Information Security Division (CISD) within DfE are responsible for ensuring the cyber security and resilience of DfE's data and technology infrastructure. Cyber security information provided by project or operational teams is a significant contributor towards this.</p>
-                <p>Our key responsibilities include:</p>
-                <ul>
-                    <li>monitoring and reporting on DfE Secure by Design posture</li>
-                    <li>managing DfE organisational cyber security risk</li>
-                    <li>providing guidance on organisational cyber security policies and standards</li>
-                    <li>supporting DfE delivery teams with adopting Secure by Design</li>
+                <h2 class="govuk-heading-l">Our role</h2>
+                <p class="govuk-body">The Cyber and Information Security Division (CISD) within DfE are responsible for ensuring the cyber security and resilience of DfE's data and technology infrastructure. Cyber security information provided by project or operational teams is a significant contributor towards this.</p>
+
+                <h2 class="govuk-heading-l">What support is available to delivery teams</h2>
+                <p class="govuk-body">CISD within DfE has overall accountability for the adoption of Secure by Design across DfE. To support delivery teams in delivering digital projects and services which are in scope for Secure by Design, we will be providing:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>enterprise threat intelligence</li>
+                    <li>security architecture guidance</li>
+                    <li>threat modelling advice and training</li>
+                    <li>cyber security incident management for critical incidents</li>
+                    <li>insights into digital services security vulnerabilities via our Continuous Assurance platform</li>
                 </ul>
             </div>
         </div>

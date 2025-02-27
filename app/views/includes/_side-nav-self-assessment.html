@@ -1,16 +1,8 @@
 
 {% set secure_by_design = [
   {
-    title: "Who is involved?",
-    url: "/secure-by-design/who-is-involved"
-  },
-  {
-    title: "Roles and responsibilities of DfE teams",
-    url: "/secure-by-design/dfe-team-roles-and-responsibilities"
-  },
-  {
-    title: "Roles and responsibilities of the Cyber and Information Security Division",
-    url: "/secure-by-design/cisd-roles-and-responsibilities"
+    title: "Tracking Secure by Design",
+    url: "/secure-by-design/tracking-secure-by-design"
   }
 ] %}
 
@@ -19,7 +11,7 @@
 
   {%- if selectedNav === "Secure by Design" %}
     <ul class="dfe-vertical-nav__section">
-      <h2 class="dfe-vertical-nav--section-header">Roles and responsibilities</h2>
+      <h2 class="dfe-vertical-nav--section-header">Self-assessments</h2>
       {% for item in secure_by_design %}
         <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
           <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>

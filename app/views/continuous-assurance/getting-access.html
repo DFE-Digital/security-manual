@@ -1,0 +1,76 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Continuous Assurance" %}
+{% set pageName = "Getting access to the dashboard" %}
+{% set seoPageName = "Getting access to the dashboard" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <span class="govuk-caption-l  govuk-!-margin-top-5">Continuous Assurance</span>
+                <h1 class="govuk-heading-xl">Getting access to the dashboard</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="manual-promo-strip">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav-CA.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <p class="govuk-body">This page will walk you through the steps required to gain access to the dashboard. Before starting the onboarding process it is important that you validate the information for your service in the Financial Business Partners Database. This information will be requested as part of onboarding your service onto the Continuous Assurance dashboard.</p>
+                <h2 class="govuk-heading-l">Step 1: Obtain required data</h2>
+                <p class="govuk-body">Identify your organisation and tenant in Azure Dev Ops.</p>
+                <h3 class="govuk-heading-m">1. Log into Azure Dev Ops</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>open your web browser and go to the Azure Dev Ops portal</li>
+                    <li>enter your login credentials and sign in</li>
+                </ul>
+                <h3 class="govuk-heading-m">2. Navigate to organisation settings</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>once logged in, click on the profile icon or the gear icon in the top-right corner of the page</li>
+                    <li>from the dropdown menu, select “Organisation settings”</li>
+                </ul>
+                <h3 class="govuk-heading-m">3. Find your organisation name</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>in the organisation settings, you will see the name of your organisation at the top of the page</li>
+                    <li>make a note of this name as it identifies your organisation with Azure Dev Ops</li>
+                </ul>
+                <h3 class="govuk-heading-m">3. Identify your tenant</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>in the organisation settings, look for the “Azure Active Directory” section on the left-hand menu</li>
+                    <li>click on “Azure Active Directory” to view details about your tenant</li>
+                    <li>you will see the tenant name and tenant ID listed in this section</li>
+                    <li>make a note of both the tenant name and tenant ID</li>
+                </ul>
+                <h2 class="govuk-heading-l">Step 2: Complete the onboarding form</h2>
+                <p class="govuk-body">To complete your onboarding process and gain access to the dashboard, please fill out the <a href="#">onboarding form</a>.</p>
+                <p class="govuk-body">Data requested within the form:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>technical contact point within team to assist in onboarding</li>
+                    <li>service tags (GitHub / Azure)</li>
+                    <li>Azure Dev Ops organisation and tenant</li>
+                    <li>requests for access. An education email address must be provided per person. Only individuals with a Department for Education laptop and account are permitted access to the dashboard</li>
+                </ul>
+                <h2 class="govuk-heading-l">Step 3: Work with CISD team</h2>
+                <p class="govuk-body">Once you have completed the steps above, your request for dashboard access will be reviewed and processed by a member of the CISD team. Depending on the setup of your service they may reach out to the named technical contact point for further information.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

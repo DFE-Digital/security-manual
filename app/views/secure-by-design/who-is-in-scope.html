@@ -1,0 +1,73 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Who is in scope for Secure by Design?" %}
+{% set seoPageName = "Who is in scope for Secure by Design?" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">Who is in scope for Secure by Design?</h1>
+                <nav class="app-sub-navigation" arial-label="Application menu">
+                    <ul class="app-sub-navigation__list">
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" aria-current="page" href="/secure-by-design/">Overview</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/secure-by-design/support">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="manual-promo-strip">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav-overview.html"%}
+                {% include "includes/_side-nav-roles.html"%}
+                {% include "includes/_side-nav-self-assessment.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <p class="govuk-body">From 31 January 2025 all new or significant changes to digital service and technology infrastructure, either built within the Department for Education (DfE) or procured through suppliers, which are in scope of digital and technology spend controls approval process must follow Secure by Design. Significant changes may include those requiring a treasury business case or where there is significant change to the cyber risk profile.</p>
+                <p class="govuk-body">Portfolios and divisions are responsible for evaluating their projects eligibility for Secure by Design when making investment decisions. Within your team you should have individuals who can support you in this evaluation.</p>
+
+                <h2 class="govuk-heading-l">Spend controls approval</h2>
+                <p class="govuk-body">You must make sure that you get spend approval before committing to any digital or technology spend which are above the spend thresholds. Any spend that is related to digital or technology delivery is in scope of this control. This includes spending on resources.</p>
+                <p class="govuk-body">The spend controls approval process is supported by <a href="https://www.get-approval-to-spend.service.gov.uk/p/login" class="govuk-link">Get approval to spend</a> service. This service is used for all public expenditure business case requests through the Cabinet Office spend approval for Digital and Technology that are above the threshold of £100,000.</p>
+                <p class="govuk-body">Within the Get Approval to Spend service, business cases undergo a process to determine their risk and importance rating: High (H), Medium (M), or Low (L). Projects identified as high risk are in-scope for Secure by Design.</p>
+                <p class="govuk-body">Business cases generally involve new digital services or technology infrastructure builds by DfE or those procured through suppliers. We expect a majority of cases will fall within the scope of Secure by Design.</p>
+
+                <h2 class="govuk-heading-l">Additional criteria</h2>
+                <p class="govuk-body">You must follow Secure by Design if your business case is in relation to one of the top 75 services flagged by the Government Digital Service (GDS). At present, for DfE, this includes:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Find an apprenticeship</li>
+                    <li>Find school and college performance</li>
+                    <li>Get information about schools</li>
+                    <li>Get into teaching</li>
+                    <li>Use the National Careers Service</li>
+                </ul>
+                <p class="govuk-body">If you are developing a service that must meet the service standard. You can <a href="https://www.gov.uk/service-manual/service-assessments/check-if-need-to-meet-service-standard" class="govuk-link">check if you need to meet the Service Standard or get an assessment</a>.</p>
+                <p class="govuk-body">If your project or service meets any of these criteria or you have further queries, <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link">contact the Secure by Design team</a>.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,25 +1,24 @@
 
-{% set secure_by_design = [
+{% set continuous_assurance = [
   {
-    title: "What is Secure by Design?",
-    url: "/secure-by-design/what-is-secure-by-design"
+    title: "Introducing the Digital Services Dashboard",
+    url: "/continuous-assurance/services-dashboard"
   },
   {
-    title: "Who is in scope for Secure by Design?",
-    url: "/secure-by-design/who-is-in-scope"
+    title: "Getting access to the dashboard",
+    url: "/continuous-assurance/getting-access"
   }
 ] %}
 
 
 <nav class="dfe-vertical-nav">
 
-  {%- if selectedNav === "Secure by Design" %}
+  {%- if selectedNav === "Continuous Assurance" %}
     <ul class="dfe-vertical-nav__section">
       <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item">
-        <a class="dfe-vertical-nav__link" href="/secure-by-design">Secure by Design</a>
+        <a class="dfe-vertical-nav__link" href="/continuous-assurance">Continuous Assurance</a>
       </li>
-      <h2 class="dfe-vertical-nav--section-header">Overview</h2>
-      {% for item in secure_by_design %}
+      {% for item in continuous_assurance %}
         <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
           <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
         </li>

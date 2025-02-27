@@ -4,31 +4,116 @@
 {% set pageName = "Secure by Design" %}
 {% set seoPageName = "Secure by Design" %}
 {% set pageDescription = "What DfE delivery teams and security professionals need to do to incorporate effective cyber security practices when building digital services and technical infrastructure."%}
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">Secure by Design</h1>
+                <nav class="app-sub-navigation" arial-label="Application menu">
+                    <ul class="app-sub-navigation__list">
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" aria-current="page" href="/secure-by-design/">Overview</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/secure-by-design/support">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="manual-promo-strip">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
 {% block content %}
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                 <p class="govuk-body-l">Secure by Design has been developed by the Government Digital Service (GDS) and a cross-government working group in collaboration with the Government Security Group, National Cyber Security Centre (NCSC) and industry experts.</p>
-                <div class="dfe-grid-container govuk-!-margin-top-9">
-    
-                    <div class="dfe-card">
-                        <div class="dfe-card-container">
-                            <h3 class="govuk-heading-m">
-                                <a href="secure-by-design/what-is-secure-by-design" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">What is Secure by Design?</a>
-                            </h3>
-                            <p>Find out more about what Secure by Design means for DfE.</p>
-                        </div>
+                <p class="govuk-body-l">As of 31 January 2025 all DfE projects and services that go through Cabinet Office spend control process must follow Secure by Design.</p>
+                <div class="govuk-grid-row split-panel govuk-!-margin-top-9" style="background: #f3f2f1;">
+                    <div class="govuk-grid-column-one-half text-column">
+                        <h2 class="govuk-heading-l govuk-!-margin-top-3">What is Secure by Design?</h2>
+                        <p class="govuk-body-l">Find out more about Secure by Design.</p>
+                        <p class="govuk-!-margin-bottom-0">
+                            <a href="/secure-by-design/what-is-secure-by-design">Learn more</a>
+                        </p>
                     </div>
-                    <div class="dfe-card">
-                        <div class="dfe-card-container">
-                            <h3 class="govuk-heading-m">
-                                <a href="secure-by-design/dfe-team-roles-and-responsibilities" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Roles and responsibilities</a>
-                            </h3>
-                            <p>What teams need to do to be Secure by Design.</p>
-                        </div>
+                    <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/assets/images/what-is-sbd.png');"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <section style="background-color:#f0f4f5;" class="govuk-!-padding-top-8 govuk-!-padding-bottom-9 govuk-!-margin-top-9">
+        <div class="govuk-width-container">
+  
+           <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                 <h2 class="govuk-heading-xl">Implementing Secure by Design</h2>
+                 <p class="govuk-body-l">How to understand if you have a project that is in scope and your roles and responsibilities.</p>
+                 <div class="dfe-grid-container govuk-!-margin-top-9">
+  
+                    <div class="dfe-card">
+                       <div class="dfe-card-container">
+                          <h3 class="govuk-heading-m">
+                             <a href="/secure-by-design/who-is-in-scope" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Understanding if your project is in scope</a>
+                          </h3>
+                          <p class="govuk-body">What Secure by Design means for DfE and who is in scope.</p>
+                       </div>
+                    </div>
+                    <div class="dfe-card">
+                       <div class="dfe-card-container">
+                          <h3 class="govuk-heading-m">
+                             <a href="/secure-by-design/dfe-team-roles-and-responsibilities" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Roles and responsibilities</a>
+                          </h3>
+                          <p class="govuk-body">What DfE teams must do to be Secure by Design.</p>
+                       </div>
+                    </div>
+                    <div class="dfe-card">
+                       <div class="dfe-card-container">
+                          <h3 class="govuk-heading-m">
+                             <a href="/secure-by-design/tracking-secure-by-design" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Tracking Secure by Design progress</a>
+                          </h3>
+                          <p class="govuk-body">Get your Secure by Design self-assessment tracker.</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     <section class="govuk-!-margin-top-7">
+        <div class="dfe-width-container">
+           <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                 <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
+                    <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
+                       <div class="govuk-grid-column-one-half text-column">
+                          <h2 class="govuk-heading-l govuk-!-margin-top-3">Getting support</h2>
+                          <p class="govuk-body-l">Reach out to ask for help with following Secure by Design.</p>
+                          <p class="govuk-!-margin-bottom-0">
+                             <a href="/secure-by-design/support">Ask for support</a>
+                          </p>
+                       </div>
+                       <div class="govuk-grid-column-one-half image-column">
+                          <div class="image-container" style="background-image: url('/assets/images/support.png');"></div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
 {% endblock %}

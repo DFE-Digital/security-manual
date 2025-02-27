@@ -1,0 +1,92 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Continuous Assurance" %}
+{% set pageName = "Introducing the Digital Services Dashboard" %}
+{% set seoPageName = "Introducing the Digital Services Dashboard" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <span class="govuk-caption-l  govuk-!-margin-top-5">Continuous Assurance</span>
+                <h1 class="govuk-heading-xl">Introducing the Digital Services Dashboard</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="manual-promo-strip">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav-CA.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <p class="govuk-body">The “Secure Posture Continuous Assurance: Digital Services Dashboard” within Splunk is designed to support the Department for Education (DfE) Digital Services in demonstrating compliance with the Secure by Design (SbD) initiative. This initiative mandates that digital services include resources for building robust security practices. The dashboard provides continuous assurance by offering insights into outstanding security vulnerabilities and facilitating the planning of remediation efforts.</p>
+                <h2 class="govuk-heading-l">How can the dashboard help your service?</h2>
+                <p class="govuk-body">The Digital Services dashboard is crucial for ensuring that DfE’s digital services adhere to security policies and processes, thereby hardening their security posture. By leveraging data from various sources, the dashboard helps digital services demonstrate compliance with SbD, ensuring that critical systems and digital assets are secure. This not only enhances the security of the services but also builds confidence in the underlying technology platforms.</p>
+                <h3 class="govuk-heading-m">Key feature and capabilities</h3>
+                <h4 class="govuk-heading-s">Continuous assurance</h4>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>provides daily insights into outstanding security vulnerabilities for each digital service</li>
+                    <li>facilitates the planning and remediation of security issues</li>
+                </ul>
+                <h4 class="govuk-heading-s">Posture hardening</h4>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>ingests data from Microsoft Defender for Cloud, CIS Benchmarks, GitHub and Qualys to test and improve security configurations</li>
+                    <li>offers alerts on known vulnerabilities and security issues</li>
+                </ul>
+                <h4 class="govuk-heading-s">Asset attribution</h4>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>maintains a database of all Azure assets and GitHub repositories, attributed to specific digital services</li>
+                    <li>uses a taxonomy based on Financial Business Partners (FBP) to categorise assets</li>
+                </ul>   
+                <h4 class="govuk-heading-s">Compliance measurement</h4>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>implements controls or use cases in Splunk to measure compliance with specific policies </li>
+                    <li>outputs compliance status as either 'Compliant' or 'Non-Compliant'</li>
+                </ul> 
+                <h2 class="govuk-heading-l">Target audience</h2>
+                <p class="govuk-body">The primary users of the Splunk dashboard are:</p>
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Digital service teams
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Responsible for managing the architecture and configuration of their applications
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Security and compliance teams
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Ensuring that digital services adhere to security security policies and processes.
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                        Service owners and contacts
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                        Overseeing the security posture of their respective digital services
+                        </dd>
+                      </div>
+                  </dl>
+            </div>
+        </div>
+    </div>
+{% endblock %}

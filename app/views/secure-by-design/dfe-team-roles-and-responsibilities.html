@@ -12,6 +12,16 @@
             <div class="govuk-grid-column-two-thirds">
                 <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
                 <h1 class="govuk-heading-xl  govuk-!-margin-top-5">Roles and responsibilities of DfE teams</h1>
+                <nav class="app-sub-navigation" arial-label="Application menu">
+                    <ul class="app-sub-navigation__list">
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" aria-current="page" href="/secure-by-design/">Overview</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/secure-by-design/support">Support</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -20,7 +30,7 @@
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
+                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
             </div>
         </div>
     </div>
@@ -33,17 +43,30 @@
             <div class="govuk-grid-column-one-quarter">
                 {% include "includes/_side-nav-overview.html"%}
                 {% include "includes/_side-nav-roles.html"%}
+                {% include "includes/_side-nav-self-assessment.html"%}
             </div>
             <div class="govuk-grid-column-three-quarters">
-                <p>Secure by Design encourages everyone to take responsibility for managing cyber security.</p>
-                <p>A project or operations team must consider cyber security from the outset. This includes agreeing team and stakeholder responsibilities which enables:</p>
-                <ul>
-                    <li>ownership of specific security activities</li>
-                    <li>identification of skills required within the team and any gaps</li>
-                    <li>personal responsibility for mitigating risk within the project or service</li>
+                <h2 class="govuk-heading-l">Agreeing roles and responsibilities</h2>
+                <p class="govuk-body">To agree security roles and responsibilities, delivery teams should:</p>
+                <ol class="govuk-list govuk-list--number">    
+                    <li>Review their existing resourcing plans.</li>
+                    <li>Understand their mandatory security obligations, including relevant policies, regulations, laws, and contractual obligations.</li>
+                    <li>Understand the <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/">activities</a> required to deliver secure digital services.</li>
+                    <li>Assign activities to roles.</li>
+                    <li>Share roles and responsibilities with assigned individuals, ensuring there is clarity on what is expected of those individuals.</li>
+                    <li>Review roles and responsibilities on a regular basis to ensure they are still appropriate for the service and the assigned individual.</li>
+                </ol>
+                <p class="govuk-body">When assigning tasks to roles, we recommend using a RACI (Responsible, Accountable, Consulted, Informed) matrix.</p>
+                <p class="govuk-body">The Cyber and Information Security Division (CISD) will be providing an outline RACI shortly.</p>
+
+                <h2 class="govuk-heading-l">Get your team involved</h2>
+                <p class="govuk-body">Secure by Design encourages everyone to be involved in delivering secure outcomes. Educating and empowering everyone in a delivery team to be active participants in security will drive better outcomes through a “one-team” mindset and participation in risk identification and management.</p>
+                <p class="govuk-body">Make sure your team understands:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>that the project is responsible for cyber security</li>
+                    <li>why designing for security from the start, and then throughout, is important</li>
+                    <li>their role in keeping DfE data secure</li>
                 </ul>
-                <p>These responsibilities should be documented by project and operational teams, with further description of the role requirements where necessary.</p>
-                <p>The Senior Responsible Owner (SRO) is accountable for making sure digital services and infrastructure either built within the department or procured through suppliers are secure. If a project or operations team do not have an SRO, another appropriate person in the team (for example, a Service Owner) should take on this role. That person must have the appropriate risk management experience or qualifications.</p>
             </div>
         </div>
     </div>

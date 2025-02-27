@@ -1,0 +1,74 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Tracking Secure by Design" %}
+{% set seoPageName = "Tracking Secure by Design" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">Tracking Secure by Design</h1>
+                <nav class="app-sub-navigation" arial-label="Application menu">
+                    <ul class="app-sub-navigation__list">
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" aria-current="page" href="/secure-by-design/">Overview</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/secure-by-design/support">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="manual-promo-strip">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav-overview.html"%}
+                {% include "includes/_side-nav-roles.html"%}
+                {% include "includes/_side-nav-self-assessment.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <p class="govuk-body">Ongoing self-assessment is a crucial part of adopting Secure by Design (SbD) principles. It enables you to keep track of your SbD activities, ensuring cyber security remains integral to project/service activities and good practice is being applied.</p>
+                <p class="govuk-body">We have created a Department for Education (DfE) version of the <a href="https://educationgovuk.sharepoint.com/:x:/r/sites/SecurebyDesignSbD-SecurebyDesignSbDchampionsgroup/Shared%20Documents/SbD%20champions%20group/DfE%20Secure%20by%20Design%20Self-Assessment%20Tracker%20v1.0.xlsx?d=w349dd979b5104e7dad0b5808f3dd66bb&csf=1&web=1&e=J2Sl3O">self-assessment tracker</a> which aligns to SbD principles you need to meet throughout the delivery lifecycle. It also captures project/service details required for reporting on DfE's adoption of SbD as an organisation. Ensure you use the DfE self-assessment.</p>
+
+                <h2 class="govuk-heading-l">When should a self-assessment be completed?</h2>
+                <p class="govuk-body">You should complete self-assessments at several points of your project/service's lifecycle, including:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>during the initial planning phase</li>
+                    <li>after significant milestones or changes in the project/service</li>
+                    <li>on a regular basis (for example, quarterly) to ensure ongoing compliance and security</li>
+                </ul>
+                <p class="govuk-body">The actual frequency is dependent upon your project/service.</p>
+
+                <h2 class="govuk-heading-l">What evidence or information do I need to supply as part of a self-assessment?</h2>
+                <p class="govuk-body">You will need to provide supporting information when completing your self-assessment. This could be an explanation of how your team has met the security requirement, or a reference to where activity outputs can be found. Our policies and standards will provide additional guidance on evidence requirements. These will continue to evolve to support a consistent DfE approach where appropriate.</p>
+                <p class="govuk-body">If you provide links to supporting documents, check that access has been set appropriately to ensure security of the information.</p>
+
+                <h2 class="govuk-heading-l">Who do I need to share my self-assessment with?</h2>
+                <p class="govuk-body">As you progress through your Secure by Design journey it is essential to keep relevant stakeholders in the loop. You should expect this to include your delivery team, your service owner/SRO and the Cyber and Information Security team.</p>
+
+                <h2 class="govuk-heading-l">Submitting your self-assessment to CISD</h2>
+                <p class="govuk-body">You must submit completed self-assessments to CISD. This is so DfE can provide organisational reporting on SbD adoption and posture to wider government.</p>
+                <p class="govuk-body">You can submit your self-assessments by completing this <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-W1bl1wZ5VJGv3ziV2goUflUN1U3UTUxNzlISUwySkk1OVNCVVE5TEVERi4u">form</a>.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

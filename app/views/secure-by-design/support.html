@@ -1,0 +1,64 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Get support" %}
+{% set seoPageName = "Get support" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span>
+                <h1 class="govuk-heading-xl">Get support</h1>
+                <nav class="app-sub-navigation" arial-label="Application menu">
+                    <ul class="app-sub-navigation__list">
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/secure-by-design/">Overview</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" aria-current="page" href="/secure-by-design/support">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="manual-promo-strip">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <h2 class="govuk-heading-l">Before reaching out</h2>
+                <p class="govuk-body">Before contacting the Cyber Information and Security Division (CISD), you should:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>review Secure by Design <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/">guidance for activities</a> provided by the Government Digital Service (GDS)</li>
+                    <li>join a scheduled Secure by Design briefing or focus session</li>
+                    <li>reach out to your Secure be Design champion</li>
+                </ul>
+                <div class="govuk-inset-text">
+                    <p class="govuk-body">Within DfE we have an <a href="https://ukgovernmentdfe.slack.com/archives/C081Q6S91FB">SbD Slack channel</a> available to help collectively tackle any questions or challenges you have regarding Secure by Design.</p>
+                </div>
+
+                <h3 class="govuk-heading-m">Join Secure by Design sessions</h3>
+                <p class="govuk-body">Learn what other teams are doing, get an insight into a particular aspect of Secure by Design and ask your questions.</p>
+                <p class="govuk-body">We are engaging with portfolios directly to setup these sessions, who will then notify you once scheduled.</p>
+
+                <h2 class="govuk-heading-l">Ask for CISD support</h2>
+                <p class="govuk-body">To reach out to CISD for support in implementing Secure by Design principles, complete this <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u">contact form</a>.</p>
+                <p class="govuk-body">Projects or services that are currently within scope for Secure by Design will be prioritised for support.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
