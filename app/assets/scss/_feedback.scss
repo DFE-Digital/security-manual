@@ -1,31 +1,47 @@
-.dfe-feedback-banner {
+.dfe-feedback{
     background-color: #f3f2f1;
-    border: 1px solid $govuk-border-colour;
-    margin-bottom: 30px;
-    .dfe-feedback-banner--content {
-        padding: 20px 15px;
-        .dfe-feedback-banner--content-questions {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            .dfe-feedback-banner--content-question {
-                display: flex;
-                align-items: center;
-                h2 {
-                    margin-right: 20px;
-                    margin-bottom: 0;
-                }
-            }
-            .govuk-button-group, .govuk-button {
-                margin-bottom: 0;
-            }
-        }
-        .govuk-button--secondary {
-            background: #ffffff !important;
-        }
-        .dfe-feedback-banner--content-message[hidden] {
-            display: none !important;
-        }
+    border-top: 1px solid #b1b4b6;
+    padding: 20px 0;
+
+}
+
+.dfe-feedback-banner--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; /* Adds spacing between elements */
+}
+
+.dfe-feedback-banner--flex h2 {
+    margin: 0; /* Remove default margins for better alignment */
+    flex-grow: 1; /* Allows text to take available space */
+}
+
+.dfe-feedback-banner--flex button {
+margin-bottom:0px;
+background-color: #003a69;
+}
+
+.dfe-feedback-banner--flex button:hover {
+background-color: #00294a;
+}
+
+.dfe-feedback-banner--flex button:focus {
+background-color: #ffdd00;
+color: #171b1f;
+}
+
+.dfe-feedback-banner .govuk-button--secondary {
+    background-color: #ffffff;
+}
+
+@media (max-width: 640px) {
+    .dfe-feedback-banner--flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dfe-feedback-banner--flex button {
+        width: 100%;
     }
 }

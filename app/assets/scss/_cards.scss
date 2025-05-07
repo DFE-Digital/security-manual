@@ -22,7 +22,7 @@
     /* Ensures padding and border are included in the width */
     background-color: govuk-colour("white");
     border: 1px solid $govuk-border-colour;
-    padding: govuk-spacing(6);
+    padding: 0 0 30px 0;
     flex: 1 0 auto;
     /* Adds flexibility and ensures cards can grow to fill space */
 

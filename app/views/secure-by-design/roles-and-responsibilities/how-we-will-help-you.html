@@ -1,0 +1,68 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "How we will help you implement Secure by Design" %}
+{% set seoPageName = "How we will help you implement Secure by Design" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                       <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                <a href="/secure-by-design/roles-and-responsibilities" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to roles and responsibilities</a>
+                {% include "includes/_side-nav-roles.html"%}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Roles and responsibilities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {% if seoPageName %}{{seoPageName}}
+                    {% else %}{{pageName}}{%endif%}</h1>
+                <h2 class="govuk-heading-l">Our role</h2>
+                <p class="govuk-body">The Cyber and Information Security Division (CISD) are responsible for ensuring the cyber security and resilience of DfE’s data and technology infrastructure. Cyber security information provided by project or operational teams is a significant contributor towards this.</p>
+
+                <h2 class="govuk-heading-l">What support is available to delivery teams</h2>
+                <p class="govuk-body">We will be providing services that include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>enterprise threat intelligence</li>
+                    <li>security architecture guidance</li>
+                    <li>threat modelling advice and training</li>
+                    <li>cyber security incident management for critical incidents</li>
+                    <li>insights into digital services security vulnerabilities via our Continuous Assurance platform</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

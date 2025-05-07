@@ -1,4 +1,11 @@
 .dfe-topnav {
     background-color: govuk-shade($color_dfe-blue, 30);
   }
+
+  .dfe-header__navigation-link {
+    padding: 12px 0;
+  }
+  .dfe-header__navigation-item {
+    margin-right: 30px;
+  }
   

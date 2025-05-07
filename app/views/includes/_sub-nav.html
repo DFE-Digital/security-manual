@@ -16,7 +16,7 @@
   {%- if selectedNav === "Secure by Design" %}
     <ul class="dfe-vertical-nav__section">
       {% for item in secure_by_design %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+        <li class="dfe-vertical-nav__section-item {% if item.title === selectedSubNav  or selectedSubNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
           <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
         </li>
       {% endfor %}
@@ -24,3 +24,5 @@
   {% endif %}
 
 </nav>
+
+{% set selectedSubNav = "Introduction" %}

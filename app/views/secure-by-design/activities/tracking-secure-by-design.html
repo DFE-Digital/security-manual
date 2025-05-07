@@ -1,0 +1,148 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Tracking Secure by Design progress" %}
+{% set seoPageName = "Tracking Secure by Design progress" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Activities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {% if seoPageName %}{{seoPageName}}
+                    {% else %}{{pageName}}{%endif%}</h1>
+                <p class="govuk-body">This activity must be performed during the following phases:</p>
+                <a href="discovery-activities"><strong class="govuk-tag govuk-tag--purple">Discovery</strong></a>
+                <a href="alpha-activities"><strong class="govuk-tag govuk-tag--yellow">Alpha</strong></a>
+                <a href="private-beta-activities"><strong class="govuk-tag govuk-tag--blue">Private beta</strong></a>
+                <a href="public-beta-and-live-activities"><strong class="govuk-tag govuk-tag--orange">Public beta and live</strong></a>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p class="govuk-body">Ongoing self-assessment is important for implementing Secure by Design (SbD) principles. It allows you to track your SbD activities and maintain cyber security in your projects work.</p>
+                <p class="govuk-body">We have developed the self-assessment tracker to support delivery teams. Complete the relevant activities in the self-assessment tracker as your project progresses.</p>
+
+                <div class="dfe-grid-container">
+                    <div class="dfe-card" style="max-width: 600px;">
+                        <div class="dfe-card-container">
+                        <h2 class="govuk-heading-m">
+                            <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Download the self-assessment tracker (opens in new tab)</a>
+                        </h2>
+                        <p class="govuk-body">Secure by Design self-assessment tracker</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="govuk-body">This tracker will evolve to better serve DfE needs. See the latest release notes for updates.</p>
+                <p class="govuk-body">This tracker offers senior leaders a clear view of secure by design adoption across DfE.</p>
+                <p class="govuk-body">The maturity of confidence in secure by design should increase through a projects' lifecycle.</p>
+                <p class="govuk-body">Use of the self-assessment tracker will support organisational confidence that:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>security risks are promptly and effectively managed</li>
+                    <li>there is a reduction to the cyber/information security risk exposure of DfE</li>
+                </ul>
+
+                <h2 class="govuk-heading-l">Purpose of self-assessment</h2>
+                <p class="govuk-body">The self-assessment tracker supports you to understand your projects cyber security maturity.</p>
+                <p class="govuk-body">The assessment is there to prompt you on:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>activities expected from a cyber security perspective</li>
+                    <li>actions and planning based on the insights the exercise provides</li>
+                </ul>
+
+                <p class="govuk-body">You may already be performing these activities in which case the extra ask is evidencing this to the relevant stakeholders.</p>
+                <p class="govuk-body">Projects are not expected to provide perfect answers or an 'all green report'.</p>
+                <p class="govuk-body">Projects must accurately report their security status to identify and address risks promptly. To show that security has been considered as part of delivery.</p>
+                <p class="govuk-body">This demonstrates due diligence and must be shared with external stakeholders.</p>
+
+
+                <h2 class="govuk-heading-l">When should self-assessment be completed?</h2>
+                <p class="govuk-body">You should complete self-assessments at several points of your project's lifecycle, including:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>during the initial planning phase</li>
+                    <li>after significant milestones or changes in the project</li>
+                    <li>on a regular basis (for example, quarterly) to ensure ongoing compliance and security</li>
+                </ul>
+                <p class="govuk-body">The actual frequency is dependent upon your project.</p>
+
+                <h2 class="govuk-heading-l">What evidence or information do I need to supply as part of self-assessment?</h2>
+                <p class="govuk-body">You will need to provide:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>details of your project/service</li>
+                    <li>explanation of how your team has met the security requirements for a delivery phase. This may include a reference to where activity outputs have been saved</li>
+                </ul>
+
+                <p class="govuk-body">The evidence for a project or service depends on it's:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>scale</li>
+                    <li>complexity</li>
+                    <li>potential business impact on DfE objectives in the event of a cyber incident</li>
+                </ul>
+
+                <p>Projects with higher business impact will need more extensive evidence of SbD activities.</p>
+                <p>The input and output evidence exemplify the evidence required for SbD good practice. Evidence examples are not prescriptive; the necessary information may be found in fewer pieces.</p>
+                <p>For example, on smaller, less complex projects there may be a single design document that contains architecture, high-level and low-level designs. A complex project may have many architectural and design documents at all levels.</p>
+                <p>You must ensure links to supporting documents have appropriate access settings for security.</p>
+                <p>Our published policies and standards provide more guidance on evidence requirements needed. They will be updated to ensure a consistent DfE approach where appropriate.</p>
+
+                <h2 class="govuk-heading-l">Who do I need to share my self-assessment with?</h2>
+                <p class="govuk-body">You should share your self-assessment with:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>delivery teams</li>
+                    <li>service owner (SRO)</li>
+                    <li>Cyber and Information Security Division (CISD)</li>
+                </ul>
+
+                <h2 class="govuk-heading-l">Sharing your self-assessment with CISD</h2>
+                <p class="govuk-body">Completed self-assessments must be shared with CISD. This allows DfE to provide organisational reporting on SbD adoption to wider government.</p>
+                <p class="govuk-body">You can submit your self-assessments by completing this <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-W1bl1wZ5VJGv3ziV2goUflUN1U3UTUxNzlISUwySkk1OVNCVVE5TEVERi4u">form</a>.</p>
+
+                <h2 class="govuk-heading-l">Reviewing the self-assessment output</h2>
+                <p class="govuk-body">The value of the self-assessment is the analysis, usage and insight it provides you.</p>
+                <p class="govuk-body">Projects should take a risk-based approach and have responsibility for:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>deciding what level of maturity they need in each aspect of security</li>
+                    <li>understanding the gaps and strengths in their security approach</li>
+                </ul>
+                <p class="govuk-body">To inform future security activities as part of your cyber security plan.</p>
+
+                <h2 class="govuk-heading-l">Plan for next assessment</h2>
+                <p class="govuk-body">Your team must ensure cyber security and risk management. The self-assessment only provides a snapshot of a project's security maturity at a specific time.</p>
+                <p class="govuk-body">Your team should continue self-assessment during delivery to identify gaps and maximise benefits.</p>
+        </div>
+    </div>
+{% endblock %}

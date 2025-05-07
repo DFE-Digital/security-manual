@@ -1,0 +1,88 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Roles and responsibilities" %}
+{% set seoPageName = "Roles and responsibilities" %}
+{% set pageDescription = "Ensure risks are mitigated by assigning cyber security responsibilities across your team."%}
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item  govuk-service-navigation__item--active">
+                       <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h1 class="govuk-heading-xl">
+            {% if seoPageName %}{{seoPageName}}
+            {% else %}{{pageName}}{%endif%}
+        </h1>
+          <p class="govuk-body-l">
+            {% if seoPageDescription %}{{seoPageDescription}}
+            {% else %}{{pageDescription}}{%endif%}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <p class="govuk-body">Cyber security must be a priority for project and operations teams from the outset. This includes setting clear roles and responsibilities for both the team and stakeholders.</p>
+                <p class="govuk-body">This should be carried out by someone with the appropriate skills or qualifications, consulting the team in the process. This is usually a Senior Responsible Officer (SRO).</p>
+                <p class="govuk-body">SRO's make risk-based decisions throughout digital service and infrastructure lifecycles to ensure security. These include those built by the department or supplied by vendors.</p>
+                <p class="govuk-body">Secure by Design encourages teams to work together to spot and manage risks. It also enables:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>ownership of specific security activities</li>
+                    <li>identification of skills required within the team</li>
+                    <li>identification of gaps in knowledge</li>
+                    <li>personal responsibility for mitigating risk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="govuk-grid-row govuk-!-margin-top-7 govuk-!-margin-bottom-9">
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list dfe-action-list">
+                <li>
+                  <a href="/secure-by-design/roles-and-responsibilities/how-to-agree-roles-and-responsibilities" class="govuk-link govuk-link--no-visited-state">How to agree roles and responsibilities
+                    <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/secure-by-design/roles-and-responsibilities/how-we-will-help-you" class="govuk-link govuk-link--no-visited-state">How we will help you implement Secure by Design
+                    <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path></svg>
+                  </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

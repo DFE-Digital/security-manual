@@ -1,52 +1,55 @@
 {% extends "layouts/full.html" %}
 
 {% set selectedNav = "Secure by Design" %}
-{% set pageName = "Roles and responsibilities of DfE teams" %}
-{% set seoPageName = "Roles and responsibilities of DfE teams" %}
+{% set pageName = "How to agree roles and responsibilities" %}
+{% set seoPageName = "How to agree roles and responsibilities" %}
 {% set pageDescription = ""%}
 
 {% block hero %}
-<section class="dfe-page-header dfe-page-header--with-sub-nav">
-    <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <!-- <span class="govuk-caption-l  govuk-!-margin-top-5">Secure by Design</span> -->
-                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">Roles and responsibilities of DfE teams</h1>
-                <nav class="app-sub-navigation" arial-label="Application menu">
-                    <ul class="app-sub-navigation__list">
-                        <li class="app-sub-navigation__item">
-                            <a class="app-sub-navigation__link" aria-current="page" href="/secure-by-design/">Overview</a>
-                        </li>
-                        <li class="app-sub-navigation__item">
-                            <a class="app-sub-navigation__link" href="/secure-by-design/support">Support</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                       <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
 </section>
-<div class="manual-promo-strip">
-    <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-                <p class="govuk-body"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RxBvc0b6F9HsHlBj5ZMN9pUN1hRRUhWWDNMRVg3MjRXTDhRWVBCNVZJQi4u" class="govuk-link govuk-!-font-weight-bold" target="_blank" rel="noopener noreferrer">Tell us what you think</a> about the cyber and information security manual and how we can make it better.</p>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}
 {% block content %}
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
 
             <div class="govuk-grid-column-one-quarter">
-                {% include "includes/_side-nav-overview.html"%}
+                <a href="/secure-by-design/roles-and-responsibilities" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to roles and responsibilities</a>
                 {% include "includes/_side-nav-roles.html"%}
-                {% include "includes/_side-nav-self-assessment.html"%}
             </div>
             <div class="govuk-grid-column-three-quarters">
-                <h2 class="govuk-heading-l">Agreeing roles and responsibilities</h2>
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Roles and responsibilities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {% if seoPageName %}{{seoPageName}}
+                    {% else %}{{pageName}}{%endif%}</h1>
                 <p class="govuk-body">To agree security roles and responsibilities, delivery teams should:</p>
                 <ol class="govuk-list govuk-list--number">    
                     <li>Review their existing resourcing plans.</li>

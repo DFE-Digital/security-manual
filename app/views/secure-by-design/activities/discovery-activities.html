@@ -1,0 +1,124 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Discovery activities" %}
+{% set seoPageName = "Discovery activities" %}
+{% set pageDescription = "An overview of all activities you will need to do across the discovery phase."%}
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <a href="/secure-by-design/activities/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-5">Back to activities</a>
+          <h1 class="govuk-heading-xl">
+            {% if seoPageName %}{{seoPageName}}
+            {% else %}{{pageName}}{%endif%}
+        </h1>
+          <p class="govuk-body-l">
+            {% if seoPageDescription %}{{seoPageDescription}}
+            {% else %}{{pageDescription}}{%endif%}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-discovery">
+            <div class="govuk-accordion__section govuk-accordion__section--expanded">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-discovery-heading-1">
+                    Activities to start with
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-discovery-content-1" class="govuk-accordion__section-content">
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/considering-security-within-the-business-case/" class="govuk-link" rel="noreferrer noopener" target="_blank">Considering security within the business case (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/identifying-security-resources/" class="govuk-link" rel="noreferrer noopener" target="_blank">Identifying security resources (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/agreeing-roles-and-responsibilities/" class="govuk-link" rel="noreferrer noopener" target="_blank">Agreeing roles and responsibilities (Opens in new tab)</a></p>
+                <p class="govuk-body" style="margin-top: 40px;">Ongoing activities that must be carried out throughout the discovery phase:</p>
+                <p class="govuk-body"><a href="tracking-secure-by-design" class="govuk-link">Tracking Secure by Design progress</a></p>
+              </div>
+            </div>
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-discovery-heading-2">
+                    Activities to do next
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-discovery-content-2" class="govuk-accordion__section-content">
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/working-out-the-projects-security-risk-appetite/" class="govuk-link" rel="noreferrer noopener" target="_blank">Working out the project's security risk appetite (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/managing-third-party-product-security-risks/" class="govuk-link" rel="noreferrer noopener" target="_blank" >Managing third-party product security risks (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/understanding-cyber-security-obligations/" class="govuk-link" rel="noreferrer noopener" target="_blank">Understanding cyber security obligations (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/understanding-business-objectives-and-user-needs/" class="govuk-link" rel="noreferrer noopener" target="_blank">Understanding business and user needs (Opens in new tab)</a></p>
+              </div>
+            </div>
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-discovery-heading-3">
+                    Activities to do later
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-discovery-content-3" class="govuk-accordion__section-content">
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/documenting-service-assets/" class="govuk-link" rel="noreferrer noopener" target="_blank">Documenting service assets (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/assessing-the-importance-of-service-assets/" class="govuk-link" rel="noreferrer noopener" target="_blank">Assessing the importance of service assets (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/sourcing-a-threat-assessment/" class="govuk-link" rel="noreferrer noopener" target="_blank">Sourcing a threat assessment (Opens in new tab)</a></p>
+              </div>
+            </div>
+          </div>
+          <nav class="govuk-pagination govuk-pagination--block" aria-label="Pagination">
+            <div class="govuk-pagination__next">
+              <a class="govuk-link govuk-pagination__link" href="alpha-activities" rel="next">
+                <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="govuk-pagination__link-title">
+                  Next<span class="govuk-visually-hidden"> page</span>
+                </span>
+                <span class="govuk-visually-hidden">:</span>
+                <span class="govuk-pagination__link-label">Alpha activities</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+{% endblock %}
