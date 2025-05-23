@@ -1,0 +1,114 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Managing observability" %}
+{% set seoPageName = "Managing observability" %}
+{% set pageDescription = "Observability refers to the ability to capture the current state of your digital project or service through logging, monitoring, and alerting. This is crucial for identifying and responding to potential attacks."%}
+
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Activities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {% if seoPageName %}{{seoPageName}}
+                    {% else %}{{pageName}}{%endif%}</h1>
+                <p class="govuk-body">This activity must be performed during the following phases:</p>
+                <a href="alpha-activities"><strong class="govuk-tag govuk-tag--yellow">Alpha</strong></a>
+                <a href="private-beta-activities"><strong class="govuk-tag govuk-tag--blue">Private beta</strong></a>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p class="govuk-body">Observability refers to the ability to capture the current state of your digital project or service through logging, monitoring, and alerting.</p>
+                <p class="govuk-body">This is crucial for identifying and responding to potential attacks.</p>
+                <p class="govuk-body">Strong observability also allows teams to:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>check the effectiveness of security controls</li>
+                    <li>identify areas of improvement on an ongoing basis</li>
+                    <li>enhance the resilience of digital projects and services while they are operational </li>
+                    <li>support ongoing security assurance activities</li>
+                </ul>
+
+                <h2 class="govuk-heading-l">Who is involved in this?</h2>
+                <p class="govuk-body">Your approach to security logging should be:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>designed by technical security architects and systems engineers. For example, DevOps who have detailed technical knowledge of your infrastructure to configure logging, storage, analysis and alerts</li>
+                    <li>monitored on a daily basis by a Security Operations Centre (SOC) or equivalent monitoring body</li>
+                    <li>supported and reviewed by security professionals to ensure accurate data capture and analysis</li>
+                </ul>
+                <p class="govuk-body">This is a shared responsibility across the Cyber and Information Security Division (CISD) and project teams for responding to security incidents.</p>
+                <p class="govuk-body">It is important that security logs and events can be shared with the Security Incident Management (SIM) team in the event of critical and major incidents (P1 and P2) or when self-reporting security incidents.</p>
+
+                <h2 class="govuk-heading-l">When should I think about observability?</h2>
+                <p class="govuk-body">You must consider your approach to logging and monitoring during the projects build phases. It should be no later than private beta stage of delivery.</p>
+                <p class="govuk-body">Thinking about this during system design allows you to:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>build and integrate the appropriate capability into your system</li>
+                    <li>identify opportunities to work alongside the CISD Security Operations Centre (SOC) in the future</li>
+                </ul>
+                <p class="govuk-body">You should regularly review your approach to security logging:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>when major system changes are planned or implemented</li>
+                    <li>when threats to your digital project or service change</li>
+                </ul>
+                <p class="govuk-body">Where required, you should update your approach to ensure any risks remain within your risk appetite.</p>
+
+                <h2 class="govuk-heading-l">Determining logging, monitoring, and alerting requirements</h2>
+                <p class="govuk-body">Delivery teams must follow the <a href="https://educationgovuk.sharepoint.com.mcas.ms/:w:/r/sites/security/_layouts/15/Doc.aspx?sourcedoc=%7BF4BFE609-8437-49AB-B1D0-298BC9759842%7D&file=policy-logging-and-monitoring.docx&action=default&mobileredirect=true&DefaultItemOpen=1%3Fweb%3D1" class="govuk-link">Logging and Monitoring Policy (DfE intranet)</a> when performing this activity. Key considerations for project teams include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>ensuring required logs are captured as per section 5.1 of the policy</li>
+                    <li>monitoring and auditing security logs as per section 5.2</li>
+                    <li>adequately protecting security logs as per section 5.4</li>
+                    <li>retention of security logs for at least 3 months, as per section 5.5</li>
+                </ul>
+                <p class="govuk-body">We recommend expressing your security monitoring needs as a series of requirements. This allows them to be easily tracked and support project planning across other SbD activities.</p>
+                <p class="govuk-body">When doing this, project teams should:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>consider the security capabilities of the technologies you are using, and whether you may need to use more capabilities</li>
+                    <li>ensure enough security data is collected to counter known threats. For example, as determined by your business impact assessment, threat assessment, <a href="performing-threat-modelling">threat modelling</a>, and associated risk treatments</li>
+                    <li>check security data on a regular ongoing basis, to identify potential security issues and attacks</li>
+                    <li>integrate security data to continuously verify and improve control effectiveness</li>
+                    <li>document the approach to ensure consistency and alignment across key stakeholders. This should include how data is analysed and when alerts are triggered in response to suspected security incidents.</li>
+                </ul>
+                <h2 class="govuk-heading-l">Further reading</h2>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://educationgovuk.sharepoint.com.mcas.ms/:w:/r/sites/security/_layouts/15/Doc.aspx?sourcedoc=%7BF4BFE609-8437-49AB-B1D0-298BC9759842%7D&file=policy-logging-and-monitoring.docx&action=default&mobileredirect=true&DefaultItemOpen=1%3Fweb%3D1" class="govuk-link"> DfE Logging and Monitoring Policy (DfE intranet)</a></li>
+                    <li><a class="govuk-link" href="https://www.ncsc.gov.uk/collection/10-steps/logging-and-monitoring" rel="noreferrer noopener" target="_blank">National Cyber Security Centre (NCSC): Logging and monitoring (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes" rel="noreferrer noopener" target="_blank">National Cyber Security Centre (NCSC): Introduction to logging for security purposes (Opens in new tab)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

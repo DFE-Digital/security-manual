@@ -1,0 +1,74 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Documenting service assets" %}
+{% set seoPageName = "Documenting service assets" %}
+{% set pageDescription = "Your team should understand what physical and virtual assets they need to protect."%}
+
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Activities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {% if seoPageName %}{{seoPageName}}
+                    {% else %}{{pageName}}{%endif%}</h1>
+                <p class="govuk-body">This activity must be performed during the following phases:</p>
+                <a href="discovery-activities"><strong class="govuk-tag govuk-tag--purple">Discovery</strong></a>
+                <a href="alpha-activities"><strong class="govuk-tag govuk-tag--yellow">Alpha</strong></a>
+                <a href="private-beta-activities"><strong class="govuk-tag govuk-tag--blue">Private beta</strong></a>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p class="govuk-body">Your team should understand what physical and virtual assets they need to protect.</p>
+                <p class="govuk-body">A detailed list of assets could include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>physical devices</li>
+                    <li>applications</li>
+                    <li>infrastructure</li>
+                    <li>data</li>
+                </ul>
+                <p class="govuk-body">Your service may need to protect assets that are not listed. You should ensure your service design and workflows account for all digital assets involved.</p>
+                <p class="govuk-body">Your asset documentation should begin during the discovery phase of your project. As the project requirements and service evolves, you should conduct regular reviews of the documented assets. This includes decommissioning any assets that are no longer in use by the service.</p>
+                <p class="govuk-body">For detailed steps, you can check <a class="govuk-link" href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/documenting-service-assets/">GOV.UK guidance on documenting service assets</a>.</p>
+
+                <h2 class="govuk-heading-l">Code repositories</h2>
+                <p class="govuk-body">You need to update your code repositories to identify ownership. This supports DfE to assign repositories to teams, service lines and cost centres.</p>
+                <p class="govuk-body">The custom properties added must align with DfE Financial Business Partners Database.</p>
+                <p class="govuk-body">Guidance for adding your custom properties is available for either GitHub or Azure.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

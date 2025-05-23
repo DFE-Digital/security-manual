@@ -1,0 +1,73 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Considering security within the business case" %}
+{% set seoPageName = "Considering security within the business case" %}
+{% set pageDescription = "You must include cyber security requirements in your business case. This helps make sure the appropriate funding, resources, skills and time are allocated to manage cyber security risks."%}
+
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Activities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {% if seoPageName %}{{seoPageName}}
+                    {% else %}{{pageName}}{%endif%}</h1>
+                <p class="govuk-body">This activity must be performed during the following phases:</p>
+                <a href="discovery-activities"><strong class="govuk-tag govuk-tag--purple">Discovery</strong></a>
+                <a href="alpha-activities"><strong class="govuk-tag govuk-tag--yellow">Alpha</strong></a>
+                <a href="private-beta-activities"><strong class="govuk-tag govuk-tag--blue">Private beta</strong></a>
+                <a href="public-beta-and-live-activities"><strong class="govuk-tag govuk-tag--orange">Public beta and live</strong></a>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p class="govuk-body">You must include cyber security requirements in your business case. This helps make sure the appropriate funding, resources, skills and time are allocated to manage cyber security risks.</p>
+                <p class="govuk-body">You may need different types of business case as services develop from idea to implementation. These should cover scoping, planning and procurement.</p>
+                <p class="govuk-body">You must include security considerations at every stage, with steps taken to review and refine them as the project matures.</p>
+                <p class="govuk-body">Contact <a href="https://educationgovuk.sharepoint.com/sites/lvewp00512">Business Case Hub</a> for practical advice and guidance on business cases.</p>
+
+                <h2 class="govuk-heading-l">Further reading</h2>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        <a class="govuk-link" href="https://www.gov.uk/government/publications/business-case-guidance-for-projects-and-programmes" rel="noreferrer noopener" target="_blank">Welcome to GOV.UK : Business case guidance for projects and programmes - Gov.uk (Opens in new tab)</a>
+                    </li>
+                    <li>
+                        <a class="govuk-link" href="https://www.gov.uk/government/publications/the-green-book-templates-and-support-material" rel="noreferrer noopener" target="_blank">Welcome to GOV.UK : The Green Book: Templates and support material - Gov.uk (Opens in new tab)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Performing threat modelling" %}
+{% set seoPageName = "Performing threat modelling" %}
+{% set pageDescription = "Threat modelling identifies potential attack routes on a system or service."%}
+
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Activities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {% if seoPageName %}{{seoPageName}}
+                    {% else %}{{pageName}}{%endif%}</h1>
+                <p class="govuk-body">This activity must be performed during the following phases:</p>
+                <a href="alpha-activities"><strong class="govuk-tag govuk-tag--yellow">Alpha</strong></a>
+                <a href="private-beta-activities"><strong class="govuk-tag govuk-tag--blue">Private beta</strong></a>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p class="govuk-body">Threat modelling identifies potential attack routes on a system or service.</p>
+                <p class="govuk-body">This is important as it allows delivery teams to:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>address emerging threats</li>
+                    <li>better understand and articulate the risk posed to their systems and services</li>
+                    <li>determine appropriate security controls and measures to manage risks in line with business needs</li>
+                    <li>verify the effectiveness and adequacy of existing security controls</li>
+                </ul>
+                <p class="govuk-body">This improves the resilience of digital projects, services and systems throughout their lifespan.</p>
+
+                <h2 class="govuk-heading-l">Who is involved in threat modelling?</h2>
+                <p class="govuk-body">Teams should appoint an appropriate person to lead the threat modelling activity.</p>
+                <p class="govuk-body">These include, but are not limited to your:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Information Security Officer (ISO)</li>
+                    <li>Solution / technical architect</li>
+                    <li>Security architect</li>
+                    <li>Penetration tester</li>
+                    <li>Governance, risk and consultancy (GRC) specialist consultant</li>
+                    <li>Security consultant with experience of threat modelling</li>
+                </ul>
+                <p class="govuk-body">Running a threat modelling workshop is the recommended way to conduct threat modelling. Teams should follow the DfE threat modelling process and playbook to guide these workshop activities. Guidance for this is currently in development.</p>
+                <p class="govuk-body">You should involve as many stakeholders as possible in your threat modelling workshop. This includes:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>your development / DevOps teams</li>
+                    <li>technical and security architects</li>
+                    <li>your Senior Responsible Owner (SRO) / service owner</li>
+                </ul>
+
+                <p class="govuk-body">You are encouraged to use the training and guidance provided by the Cyber and Information Security Division (CISD) Security Architecture (SecArch) team to train prior to conducting threat modelling.</p>
+
+                <h2 class="govuk-heading-l">When should I conduct threat modelling?</h2>
+                <p class="govuk-body">You must do threat modelling during the:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>service design and build phase</li>
+                    <li>alpha phase, and no later than private beta phase</li>
+                </ul>
+                <p class="govuk-body">You also need to review threat models:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>when it makes sense for the digital project or service and business importance</li>
+                    <li>after a security incident</li>
+                    <li>when the threat landscape changes, including when a new DfE Threat Assessment is released</li>
+                    <li>when significant system changes are planned</li>
+                </ul>
+
+                <h2 class="govuk-heading-l">How is threat modelling conducted?</h2>
+                <p class="govuk-body">Threat modelling involves:</p>
+                <ol class="govuk-list govuk-list--number">
+                    <li>Documenting your system end-to-end, focusing on key components and data flow.</li>
+                    <li>Understanding potential system failures, component vulnerabilities and exploitation risks.</li>
+                    <li>Using this knowledge to mitigate threats via a variety of treatment options. For example, system redesign, implementation of proportionate security controls, or ceasing high risk activities.</li>
+                </ol>
+                <p class="govuk-body">We encourage you to use a recommended threat modelling approach. This should reflect the scale, complexity and importance of your digital project or service, and the technologies used.</p>
+                <p class="govuk-body">These approaches include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>the STRIDE-LM (Spoofing, Tampering, Non-Repudiation, Information Disclosure, Denial of Service, Escalation of Privilege, Lateral Movement) threat taxonomy for identifying and understanding types of threats</li>
+                    <li>the MITRE ATT&CK framework to explore attack modelling and vulnerabilities that may apply to your service</li>
+                    <li>attack trees for modelling attack pathways</li>
+                    <li>the Lockhead Martin Kill chain to understand the cyber-attack lifecycle</li>
+                </ul>
+                <p class="govuk-body">You should analyse threats with enough details for informed, risk-based decision making.</p>
+                <p class="govuk-body">Your team should confirm threat models as part of their SbD continuous improvement.</p>
+                <p class="govuk-body">This is to:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>ensure alignment to SbD principles</li>
+                    <li>check the robustness of the threat modelling approach</li>
+                    <li>verify the correctness of the final output</li>
+                </ul>
+                <p class="govuk-body">Validation should be conducted by individuals not involved in creation of the original threat model.</p>
+                <h2 class="govuk-heading-l">Further reading</h2>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link" href="https://www.gov.uk/government/publications/secure-connected-places-playbook-documents/conducting-a-stride-based-threat-analysis" rel="noreferrer noopener" target="_blank">Conducting a STRIDE-based threat analysis - GOV.UK (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://attack.mitre.org/" rel="noreferrer noopener" target="_blank">MITRE ATT&CK (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://www.ncsc.gov.uk/collection/risk-management/using-attack-trees-to-understand-cyber-security-risk" rel="noreferrer noopener" target="_blank">Attack Trees - NCSC (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://catalog.workshops.aws/threatmodel/en-US/what-can-go-wrong/threat-grammar" rel="noreferrer noopener" target="_blank">Amazon Web Services Threat Grammar (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/performing-threat-modelling/" rel="noreferrer noopener" target="_blank">Performing threat modelling - Government security (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://shostack.org/resources/threat-modeling" rel="noreferrer noopener" target="_blank">The Ultimate Beginners Guide to Threat modelling -  Adam Shostack (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://learn.microsoft.com/en-us/training/modules/tm-introduction-to-threat-modeling/" rel="noreferrer noopener" target="_blank">Threat Modelling training (STRIDE) - Microsoft (Opens in new tab)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Secure by Design" %}
+{% set pageName = "Discovering vulnerabilities" %}
+{% set seoPageName = "Discovering vulnerabilities" %}
+{% set pageDescription = "You must include cyber security requirements in your business case. This helps make sure the appropriate funding, resources, skills and time are allocated to manage cyber security risks."%}
+
+{% block hero %}
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
+   <div class="govuk-width-container">
+       <div class="govuk-service-navigation__container">
+           <span class="govuk-service-navigation__service-name">
+               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
+               Secure by Design
+           </a>
+           </span>
+           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
+               Menu
+           </button>
+               <ul class="govuk-service-navigation__list" id="navigation">
+                   <li class="govuk-service-navigation__item">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
+                   </li>
+                   <li class="govuk-service-navigation__item ">
+                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
+                   </li>
+                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
+                  </li>
+                  <li class="govuk-service-navigation__item ">
+                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
+                  </li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Activities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {% if seoPageName %}{{seoPageName}}
+                    {% else %}{{pageName}}{%endif%}</h1>
+                <p class="govuk-body">This activity must be performed during the following phases:</p>
+                <a href="alpha-activities"><strong class="govuk-tag govuk-tag--yellow">Alpha</strong></a>
+                <a href="private-beta-activities"><strong class="govuk-tag govuk-tag--blue">Private beta</strong></a>
+                <a href="public-beta-and-live-activities"><strong class="govuk-tag govuk-tag--orange">Public beta and live</strong></a>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p class="govuk-body">Your service's security depends on detecting and fixing vulnerabilities before exploitation. </p>
+                <p class="govuk-body">Persistent adversaries are attacking digital projects and services at an ever-increasing pace. You need to identify and address weaknesses to strengthen your digital project's resilience against cyber-attacks.</p>
+                <p class="govuk-body">Before discovering vulnerabilities, you must:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>define a project-level <a href="implementing-a-vulnerability-management-process">vulnerability management process</a></li>
+                    <li>understand the scope of your project</li>
+                    <li>understand and be familiar with the DfE standard vulnerability escalation process</li>
+                </ul>
+
+                <h2 class="govuk-heading-l">When should this be done?</h2>
+                <p class="govuk-body">The process of discovering vulnerabilities should:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>begin during the system design phase, using documentation to identify potential vulnerabilities</li>
+                    <li>be performed during every phase of the delivery life cycle</li>
+                    <li>start no later than the alpha stage of delivery</li>
+                </ul>
+
+                <h2 class="govuk-heading-l">Who should be involved in this?</h2>
+                <p class="govuk-body">During the design phase, your technical architects should work with security professionals to identify potential vulnerabilities in the design. This is often done through <a href="performing-threat-modelling">threat modelling</a> workshops.</p>
+                <p class="govuk-body">From the build phase onwards, development and DevOps teams should be responsible for discovering and correcting vulnerabilities using appropriate methods.</p>
+                <p class="govuk-body">This may involve:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>seeking support from the Cyber and Information Security Division (CISD)</li>
+                    <li>implementing tools and technologies to detect vulnerabilities</li>
+                    <li>engaging third-party suppliers to undertake vulnerability scans or penetration tests</li>
+                </ul>
+                <p>You should keep the project's Senior Responsible Officer (SRO) and service owner informed of the tests. You should make sure outputs are considered as part of risk management decisions.</p>
+
+
+                <h2 class="govuk-heading-l">Recommended approaches for detecting vulnerabilities</h2>
+                <p class="govuk-body">Teams should use a variety of tools and techniques to detect vulnerabilities across their design, code, and systems. Do not rely on a single approach.</p>
+                <p class="govuk-body">These may include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="performing-threat-modelling">threat modelling</a> to identify vulnerabilities in system designs</li>
+                    <li>code scanning and peer reviews to identify vulnerabilities in your codebase</li>
+                    <li>vulnerability scanning, penetration testing, or IT health checks to identify system vulnerabilities.</li>
+                </ul>
+                <p class="govuk-body">Technical guidance for development and DevOps teams using DfE tools will be available soon.</p>
+                <p class="govuk-body">Project teams should use these before deploying their own. Speak to the Cyber and Information Security Division (CISD) if you need support in using them.</p>
+                <p class="govuk-body">You should define and communicate a clear schedule for these approaches. This should specify what is ongoing, periodic, or tied to delivery stage transitions.</p>
+                <p class="govuk-body">You must document the outputs from any tools and techniques used and capture these in your project risk management processes. You should understand the severity of any vulnerabilities and make sure a risk-based decision on risk treatment is taken. You should use a risk register or risk tooling to support this.</p>
+                <p class="govuk-body">You should inform your SRO and service owner of any vulnerabilities.</p>
+
+                <h2 class="govuk-heading-l">Further reading</h2>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link" href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/discovering-vulnerabilities/" rel="noreferrer noopener" target="_blank">Discovering vulnerabilities - Government Security (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://www.ncsc.gov.uk/collection/vulnerability-management/guidance" rel="noreferrer noopener" target="_blank">Vulnerability management - NCSC Guidance (Opens in new tab)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
