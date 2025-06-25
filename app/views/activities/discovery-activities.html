@@ -1,59 +1,28 @@
 {% extends "layouts/full.html" %}
 
-{% set selectedNav = "Secure by Design" %}
-{% set pageName = "Discovery activities" %}
-{% set seoPageName = "Discovery activities" %}
-{% set pageDescription = "An overview of all activities you will need to do across the discovery phase."%}
-{% block hero %}
-<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
-   <div class="govuk-width-container">
-       <div class="govuk-service-navigation__container">
-           <span class="govuk-service-navigation__service-name">
-               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
-               Secure by Design
-           </a>
-           </span>
-           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
-               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
-               Menu
-           </button>
-               <ul class="govuk-service-navigation__list" id="navigation">
-                   <li class="govuk-service-navigation__item">
-                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
-                   </li>
-                   <li class="govuk-service-navigation__item">
-                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
-                   </li>
-                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
-                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
-                  </li>
-                  <li class="govuk-service-navigation__item ">
-                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
-                  </li>
-               </ul>
-           </nav>
-       </div>
-   </div>
-</section>
-<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+{% set serviceNav = "Activities" %}
+{% set path = "activities/discovery-activities" %}
+{% set title = "Discovery activities" %}
+{% set description = "An overview of all activities you will need to do across the discovery phase." %}
+{% set mainClasses = 'govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0'%}
+
+{% block content %}
+<section style="background-color:#f4f8fb;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-three-quarters">
-          <a href="/secure-by-design/activities/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-5">Back to activities</a>
+          <a href="/activities/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-5">Back to activities</a>
           <h1 class="govuk-heading-xl">
-            {% if seoPageName %}{{seoPageName}}
-            {% else %}{{pageName}}{%endif%}
+            {{title}}
         </h1>
           <p class="govuk-body-l">
-            {% if seoPageDescription %}{{seoPageDescription}}
-            {% else %}{{pageDescription}}{%endif%}
+            {{description}}
           </p>
         </div>
       </div>
     </div>
   </section>
-{% endblock %}
-{% block content %}
+  <section style="background-color:#fff;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
     <div class="govuk-width-container">
       <div class="govuk-grid-row govuk-!-margin-top-5 govuk-!-margin-bottom-5">
         <div class="govuk-grid-column-two-thirds">

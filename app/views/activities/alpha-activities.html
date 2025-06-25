@@ -1,91 +1,62 @@
 {% extends "layouts/full.html" %}
 
-{% set selectedNav = "Secure by Design" %}
-{% set pageName = "Private beta activities" %}
-{% set seoPageName = "Private beta activities" %}
-{% set pageDescription = "An overview of all activities you will need to do across the private beta phase."%}
-{% block hero %}
-<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
-   <div class="govuk-width-container">
-       <div class="govuk-service-navigation__container">
-           <span class="govuk-service-navigation__service-name">
-               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
-               Secure by Design
-           </a>
-           </span>
-           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
-               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
-               Menu
-           </button>
-               <ul class="govuk-service-navigation__list" id="navigation">
-                   <li class="govuk-service-navigation__item">
-                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
-                   </li>
-                   <li class="govuk-service-navigation__item">
-                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
-                   </li>
-                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
-                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
-                  </li>
-                  <li class="govuk-service-navigation__item ">
-                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
-                  </li>
-               </ul>
-           </nav>
-       </div>
-   </div>
-</section>
-<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+{% set serviceNav = "Activities" %}
+{% set path = "activities/alpha-activities" %}
+{% set title = "Alpha activities" %}
+{% set description = "An overview of all activities you will need to do across the alpha phase." %}
+{% set mainClasses = 'govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0'%}
+
+{% block content %}
+<section style="background-color:#f4f8fb;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-three-quarters">
-          <a href="/secure-by-design/activities/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-5">Back to activities</a>
+          <a href="/activities/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-5">Back to activities</a>
           <h1 class="govuk-heading-xl">
-            {% if seoPageName %}{{seoPageName}}
-            {% else %}{{pageName}}{%endif%}
+            {{title}}
         </h1>
           <p class="govuk-body-l">
-            {% if seoPageDescription %}{{seoPageDescription}}
-            {% else %}{{pageDescription}}{%endif%}
+            {{description}}
           </p>
         </div>
       </div>
     </div>
   </section>
-{% endblock %}
-{% block content %}
+  <section style="background-color:#fff;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
     <div class="govuk-width-container">
       <div class="govuk-grid-row govuk-!-margin-top-5 govuk-!-margin-bottom-5">
         <div class="govuk-grid-column-two-thirds">
-          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-private-beta">
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-alpha">
             <div class="govuk-accordion__section govuk-accordion__section--expanded">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-private-beta-heading-1">
+                  <span class="govuk-accordion__section-button" id="accordion-alpha-heading-1">
                     Activities to start with
                   </span>
                 </h2>
               </div>
-              <div id="accordion-private-beta-content-1" class="govuk-accordion__section-content">
+              <div id="accordion-alpha-content-1" class="govuk-accordion__section-content">
                 <p class="govuk-body"><a href="considering-security-within-the-business-case" class="govuk-link">Considering security within the business case</a></p>
                 <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/identifying-security-resources/" class="govuk-link" rel="noreferrer noopener" target="_blank">Identifying security resources (Opens in new tab)</a></p>
                 <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/agreeing-roles-and-responsibilities/" class="govuk-link" rel="noreferrer noopener" target="_blank">Agreeing roles and responsibilities (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/working-out-the-projects-security-risk-appetite/" class="govuk-link" rel="noreferrer noopener" target="_blank">Working out the project's security risk appetite (Opens in new tab)</a></p>
                 <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/managing-third-party-product-security-risks/" class="govuk-link" rel="noreferrer noopener" target="_blank" >Managing third-party product security risks (Opens in new tab)</a></p>
-                <p class="govuk-body" style="margin-top: 40px;">Ongoing activities that must be carried out throughout the private beta phase:</p>
+                <p class="govuk-body" style="margin-top: 40px;">Ongoing activities that must be carried out throughout the alpha phase:</p>
                 <p class="govuk-body"><a href="tracking-secure-by-design-progress" class="govuk-link">Tracking Secure by Design progress</a></p>
               </div>
             </div>
             <div class="govuk-accordion__section">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-private-beta-heading-2">
+                  <span class="govuk-accordion__section-button" id="accordion-alpha-heading-2">
                     Activities to do next
                   </span>
                 </h2>
               </div>
-              <div id="accordion-private-beta-content-2" class="govuk-accordion__section-content">
+              <div id="accordion-alpha-content-2" class="govuk-accordion__section-content">
                 <p class="govuk-body"><a href="documenting-service-assets" class="govuk-link">Documenting service assets</a></p>
                 <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/assessing-the-importance-of-service-assets/" class="govuk-link" rel="noreferrer noopener" target="_blank">Assessing the importance of service assets (Opens in new tab)</a></p>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/sourcing-a-threat-assessment/" class="govuk-link" rel="noreferrer noopener" target="_blank">Sourcing a threat assessment (Opens in new tab)</a></p>
                 <p class="govuk-body"><a href="performing-threat-modelling" class="govuk-link">Performing threat modelling</a></p>
                 <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/performing-a-security-risk-assessment/" class="govuk-link" rel="noreferrer noopener" target="_blank">Performing a security risk assessment (Opens in new tab)</a></p>
                 <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/agreeing-a-security-controls-set-for-your-service/" class="govuk-link" rel="noreferrer noopener" target="_blank">Agreeing a security controls set for your service (Opens in new tab)</a></p>
@@ -93,12 +64,12 @@
             <div class="govuk-accordion__section">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-private-beta-heading-3">
+                  <span class="govuk-accordion__section-button" id="accordion-alpha-heading-3">
                     Activities to do later
                   </span>
                 </h2>
               </div>
-              <div id="accordion-private-beta-content-3" class="govuk-accordion__section-content">
+              <div id="accordion-alpha-content-3" class="govuk-accordion__section-content">
                 <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/responding-to-and-mitigating-security-risks/" class="govuk-link" rel="noreferrer noopener" target="_blank">Responding to and mitigating security risks (Opens in new tab)</a></p>
                 <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/assessing-the-effectiveness-of-security-controls/" class="govuk-link" rel="noreferrer noopener" target="_blank">Assessing the effectiveness of security controls (Opens in new tab)</a></p>
                 <p class="govuk-body"><a href="implementing-a-vulnerability-management-process" class="govuk-link">Implementing a vulnerability management process</a></p>
@@ -111,7 +82,7 @@
           </div>
           <nav class="govuk-pagination govuk-pagination--block" aria-label="Pagination">
             <div class="govuk-pagination__prev">
-              <a class="govuk-link govuk-pagination__link" href="alpha-activities" rel="prev">
+              <a class="govuk-link govuk-pagination__link" href="discovery-activities" rel="prev">
                 <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
                   <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
                 </svg>
@@ -119,11 +90,11 @@
                   Previous<span class="govuk-visually-hidden"> page</span>
                 </span>
                 <span class="govuk-visually-hidden">:</span>
-                <span class="govuk-pagination__link-label">Alpha activities</span>
+                <span class="govuk-pagination__link-label">Discovery activities</span>
               </a>
             </div>
             <div class="govuk-pagination__next">
-              <a class="govuk-link govuk-pagination__link" href="public-beta-and-live-activities" rel="next">
+              <a class="govuk-link govuk-pagination__link" href="private-beta-activities" rel="next">
                 <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
                   <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
                 </svg>
@@ -131,7 +102,7 @@
                   Next<span class="govuk-visually-hidden"> page</span>
                 </span>
                 <span class="govuk-visually-hidden">:</span>
-                <span class="govuk-pagination__link-label">Public beta and live activities</span>
+                <span class="govuk-pagination__link-label">Private beta activities</span>
               </a>
             </div>
           </nav>

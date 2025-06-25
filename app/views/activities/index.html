@@ -1,0 +1,86 @@
+{% extends "layouts/full.html" %}
+
+{% set serviceNav = "Activities" %}
+{% set path = "activities" %}
+{% set title = "Activities" %}
+{% set description = "Find out about the activities you'll need to do in each phase of development and how to track your progress." %}
+
+{% set mainClasses = 'govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0'%}
+
+{% block content %}
+<section style="background-color:#f4f8fb;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h1 class="govuk-heading-xl">
+            {{title}}
+        </h1>
+          <p class="govuk-body-l">
+            {{description}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background-color:#fff;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list dfe-action-list">
+            <li>
+              <a href="/activities/all-activities" class="govuk-link govuk-link--no-visited-state">View all activities within the product lifecycle
+                <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path></svg>
+              </a>
+            </li>
+            </ul>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-three-quarters">
+            <h2 class="govuk-heading-l">Explore the activities in each phase</h2>
+          </div>
+      </div>
+      <div class="dfe-grid-container">
+        <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
+              <a href="/activities/discovery-activities" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Discovery</a>
+            </h2>
+          </div>
+        </div>
+        <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
+              <a href="/activities/alpha-activities" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Alpha</a>
+            </h2>
+          </div>
+        </div>
+        <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
+              <a href="/activities/private-beta-activities" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Private beta</a>
+            </h2>
+          </div>
+        </div>
+        <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
+              <a href="/activities/public-beta-and-live-activities" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Public beta and live</a>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-grid-row split-panel govuk-!-margin-top-9 govuk-!-margin-bottom-9" style="background: #f3f2f1;">
+        <div class="govuk-grid-column-one-half text-column">
+            <h2 class="govuk-heading-l govuk-!-margin-top-3">Tracking Secure by Design progress</h2>
+            <p class="govuk-body">Download your self-assessment tracker and record your activity progress.</p>
+            <p class="govuk-!-margin-bottom-0">
+                <a href="/activities/tracking-secure-by-design-progress">Find out more about the tracker</a>
+            </p>
+        </div>
+        <div class="govuk-grid-column-one-half image-column">
+            <div class="image-container" style="background-image: url('/assets/images/roles-and-responsibilities.png');"></div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

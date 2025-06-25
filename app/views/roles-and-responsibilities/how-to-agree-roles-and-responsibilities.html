@@ -1,0 +1,57 @@
+{% extends "layouts/full.html" %}
+
+{% set serviceNav = "Roles and responsibilities" %}
+{% set path = "roles-and-responsibilities/how-to-agree-roles-and-responsibilities" %}
+{% set title = "How to agree roles and responsibilities" %}
+{% set description = "Delivery teams should agree security roles and responsibilities for Secure by Design." %}
+
+
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-quarter">
+                <a href="/roles-and-responsibilities" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to Roles and responsibilities</a>
+                
+                <nav class="dfe-vertical-nav">
+                    <ul class="dfe-vertical-nav__section">
+                        <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                            <a class="dfe-vertical-nav__link" href="/roles-and-responsibilities/how-to-agree-roles-and-responsibilities">How to agree roles and responsibilities</a>
+                        </li>
+                        <li class="dfe-vertical-nav__section-item ">
+                            <a class="dfe-vertical-nav__link" href="/roles-and-responsibilities/how-we-will-help-you">How we will help you implement Secure by Design</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Roles and responsibilities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{title}}</h1>
+                <p class="govuk-body">Delivery teams should agree security roles and responsibilities for Secure by Design.</p>
+                <p class="govuk-body">We recommend using a RACI (Responsible, Accountable, Consulted, Informed) matrix.</p>
+                <p class="govuk-body">For each role and responsibility, you should:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>clarify expectations</li>
+                    <li>regularly review for relevance to the service and individual</li>
+                </ul>
+                <p class="govuk-body">Delivery teams need to:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>review their existing resourcing plans</li>
+                    <li>understand their mandatory security obligations, including relevant policies, regulations, laws, and contractual obligations</li>
+                    <li>understand the <a href="../activities/">activities</a> required to deliver secure digital services</li>
+                    <li>assign activities to roles</li>
+                    <li>share roles and responsibilities with assigned individuals</li>
+                </ul>
+                <p class="govuk-body">The Cyber and Information Security Division (CISD) will be providing an outline RACI shortly.</p>
+
+                <h2 class="govuk-heading-l">Get your team involved</h2>
+                <p class="govuk-body">Secure by Design encourages everyone on the team to get involved with security. Together everyone can work together to spot and manage risks for the better.</p>
+                <p class="govuk-body">Ensure your team understands the:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>project's responsibility for cybersecurity</li>
+                    <li>importance of integrating security from the beginning and throughout</li>
+                    <li>role in safeguarding DfE data</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

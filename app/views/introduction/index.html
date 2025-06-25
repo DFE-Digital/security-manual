@@ -1,0 +1,48 @@
+{% extends "layouts/full.html" %}
+
+{% set serviceNav = "Introduction" %}
+{% set path = "introduction" %}
+{% set title = "What is Secure by Design?" %}
+{% set description = "Secure by Design is a cross-government initiative that sets out what we need to do to incorporate effective cyber security practices into our digital delivery." %}
+
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                <a href="../" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to Secure by Design</a>
+                <nav class="dfe-vertical-nav">
+                    <ul class="dfe-vertical-nav__section">
+                        <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                            <a class="dfe-vertical-nav__link" href="/introduction">What is Secure by Design?</a>
+                        </li>
+                        <li class="dfe-vertical-nav__section-item ">
+                            <a class="dfe-vertical-nav__link" href="/introduction/understanding-if-your-project-should-be-included">Understanding if your project should be included</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <span class="govuk-caption-xl govuk-!-margin-top-1">{{serviceNav}}</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+                    {{title}}
+                </h1>
+                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/" class="govuk-link">Secure by Design</a> is a cross-government initiative that sets out what we need to do to incorporate effective cyber security practices into our digital delivery.</p>
+                <p class="govuk-body">It is mandatory for government departments and arm's length bodies (ALBs).</p>
+                <p class="govuk-body">The aim of Secure by Design is to increase our cyber resilience and improve how we share data with other organisations. To do this we need to ensure cyber security is built into our systems and services from the start. The benefits of this are:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>we'll be less likely to suffer cyber attacks</li>
+                    <li>we'll be able to detect attacks earlier and respond more effectively, reducing the impact to the services we provide to the education sector</li>
+                </ul>
+                <p class="govuk-body">This approach provides:
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>risk driven <a href="../activities">activities</a> for building appropriate and proportionate cyber security controls within digital services</li>
+                    <li>clarity on roles and responsibilities to manage security risks and improve security culture</li>
+                    <li>practical guidance and tools to achieve the <a href="https://www.security.gov.uk/policy-and-guidance/govassure/components-of-the-caf/">Cyber Assessment Framework (CAF)</a> outcomes as part of <a href="https://www.security.gov.uk/policy-and-guidance/govassure/">GovAssure</a></li>
+                </ul>
+                </p>
+                <p class="govuk-body">Read the Secure by Design <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/policy/">policy</a> and <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/principles/">principles</a> to find out more.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

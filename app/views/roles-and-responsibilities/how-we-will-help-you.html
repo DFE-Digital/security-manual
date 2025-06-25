@@ -1,0 +1,42 @@
+{% extends "layouts/full.html" %}
+
+{% set serviceNav = "Roles and responsibilities" %}
+{% set path = "roles-and-responsibilities/how-we-will-help-you" %}
+{% set title = "How we will help you implement Secure by Design" %}
+{% set description = "The Cyber and Information Security Division (CISD) are responsible for ensuring the cyber security and resilience of DfE's data and technology infrastructure. Cyber security information provided by project or operational teams is a significant contributor towards this." %}
+
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-quarter">
+                <a href="/roles-and-responsibilities" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to Roles and responsibilities</a>
+                <nav class="dfe-vertical-nav">
+                    <ul class="dfe-vertical-nav__section">
+                        <li class="dfe-vertical-nav__section-item ">
+                            <a class="dfe-vertical-nav__link" href="/roles-and-responsibilities/how-to-agree-roles-and-responsibilities">How to agree roles and responsibilities</a>
+                        </li>
+                        <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                            <a class="dfe-vertical-nav__link" href="/roles-and-responsibilities/how-we-will-help-you">How we will help you implement Secure by Design</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+                <span class="govuk-caption-xl govuk-!-margin-top-1">Roles and responsibilities</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{title}}</h1>
+                <h2 class="govuk-heading-l">Our role</h2>
+                <p class="govuk-body">The Cyber and Information Security Division (CISD) are responsible for ensuring the cyber security and resilience of DfE's data and technology infrastructure. Cyber security information provided by project or operational teams is a significant contributor towards this.</p>
+
+                <h2 class="govuk-heading-l">What support is available to delivery teams</h2>
+                <p class="govuk-body">We will be providing services that include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>enterprise threat intelligence</li>
+                    <li>security architecture guidance</li>
+                    <li>threat modelling advice and training</li>
+                    <li>cyber security incident management for critical incidents</li>
+                    <li>insights into digital services security vulnerabilities via our Continuous Assurance platform</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

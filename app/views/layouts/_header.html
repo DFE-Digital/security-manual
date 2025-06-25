@@ -1,37 +1,36 @@
-{{ header({
+{{ govukHeader({
+"rebrand": "true",
 "showNav": "true",
 "showSearch": "true",
-"showHeaderActionLinks": "true",
-"showUserName": "false",
-"userName": "",
-"userNameURL": "",
-"selectedNav": selectedNav,
-"logoPath": "assets/images/",
-"searchInputName": "searchterm",
+"showHeaderActionLinks": "false",
+"logoPath": "assets/images",
+"searchAction": "/search",
+"searchInputName": "q",
 "logoAltText": "Department for Education cyber and information security manual",
-"homeHref":"https://cyber-security.education.gov.uk",
+"homeHref": "https://cyber-security.education.gov.uk",
+"selectedNav": view,
 "service": {
+"name": "",
 "serviceUrl": "/"
 },
-"headerActionLinks": [
-{ }
-],
+"headerActionLinks": [],
 "primaryLinks": [
 {
-    "url": "/",
-    "label": "Cyber and information security"
-},
-{
-    "url" : "/secure-by-design",
-    "label" : "Secure by Design"
+"url" : "/",
+"label" : "Home"
+}, {
+"url" : "/introduction",
+"label" : "Introduction"
+}, {
+"url" : "/roles-and-responsibilities",
+"label" : "Roles and responsibilities"
+}, {
+"url" : "/activities",
+"label" : "Activities"
+}, {
+"url" : "/get-support",
+"label" : "Get support"
 }
 ]
 })
 }}
-
-<style>.dfe-header__action-links {
-    margin-bottom: 20px;
-}
-</style>
-
-<!-- "url": "/support", "label": "Support"  -->

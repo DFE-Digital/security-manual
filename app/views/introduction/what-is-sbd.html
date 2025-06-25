@@ -1,9 +1,10 @@
 {% extends "layouts/full.html" %}
 
 {% set selectedNav = "Secure by Design" %}
-{% set pageName = "What is Secure by Design?" %}
-{% set seoPageName = "What is Secure by Design?" %}
-{% set pageDescription = "Secure by Design is a cross-government initiative that sets out what we need to do to incorporate effective cyber security practices into our digital delivery."%}
+{% set selectedSubNav = "Introduction" %}
+{% set pageName = "What is SbD" %}
+{% set seoPageName = "Understanding if your project should be included" %}
+{% set pageDescription = "All DfE projects and services that go through Cabinet Office spend control process must follow Secure by Design."%}
 
 {% block hero %}
 <section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
@@ -50,22 +51,40 @@
                 <h1 class="govuk-heading-xl govuk-!-margin-top-5">
                     {% if seoPageName %}{{seoPageName}}
                     {% else %}{{pageName}}{%endif%}</h1>
-                <p class="govuk-body"><a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/">Secure by Design</a> is a cross-government initiative that sets out what we need to do to incorporate effective cyber security practices into our digital delivery.</p>
-                <p class="govuk-body">It is mandatory for government departments and arm's length bodies (ALBs).</p>
-                <p class="govuk-body">The aim of Secure by Design is to increase our cyber resilience and improve how we share data with other organisations. To do this we need to ensure cyber security is built into our systems and services from the start. The benefits of this are:</p>
+                <p class="govuk-body">All DfE projects and services that go through Cabinet Office spend control process must follow Secure by Design. This includes:</p>
                 <ul class="govuk-list govuk-list--bullet">
-                    <li>we'll be less likely to suffer cyber attacks</li>
-                    <li>we'll be able to detect attacks earlier and respond more effectively, reducing the impact to the services we provide to the education sector</li>
+                    <li>all new or significant changes to digital service and technology infrastructure </li>
+                    <li>projects built within the Department for Education (DfE) or procured through suppliers</li>
+                    <li>if your service is one of the top 75 services recognised by Government Digital Service (GDS)</li>
                 </ul>
-                <p class="govuk-body">This approach provides:
+
+                <p class="govuk-body">The DfE services recognised as part of the top 75 include:</p>
                 <ul class="govuk-list govuk-list--bullet">
-                    <li>risk driven <a href="/secure-by-design/activities">activities</a> for building appropriate and proportionate cyber security controls within digital services</li>
-                    <li>clarity on roles and responsibilities to manage security risks and improve security culture</li>
-                    <li>practical guidance and tools to achieve the <a href="https://www.security.gov.uk/policy-and-guidance/govassure/components-of-the-caf/">Cyber Assessment Framework (CAF)</a> outcomes as part of <a href="https://www.security.gov.uk/policy-and-guidance/govassure/">GovAssure</a></li>
+                    <li>Find an apprenticeship</li>
+                    <li>Find school and college performance</li>
+                    <li>Get information about schools</li>
+                    <li>Get into teaching</li>
+                    <li>Use the National Careers Service</li>
                 </ul>
-                </p>
-                <p class="govuk-body">Read the Secure by Design <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/policy/">policy</a> and <a href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/principles/">principles</a> to find out more.</p>
+
+                <p>Your team will need someone who can support you in your Secure by Design evaluation. For example, delivery managers or technical developers.</p>
+
+                <h2 class="govuk-heading-l">Spend controls approval</h2>
+                <p class="govuk-body">You need spend approval before committing to any digital or technology spend which is above the spend control thresholds.</p>
+                <p class="govuk-body">Projects identified as high risk are included in Secure by Design.</p>
+                <p class="govuk-body">The spend controls approval process is supported by <a href="https://www.get-approval-to-spend.service.gov.uk/p/login" class="govuk-link">Get approval to spend</a> service.</p>
+                <p class="govuk-body">Through the service business cases undergo a process to determine their risk and importance rating. These are:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>High (H)</li>
+                    <li>Medium (M)</li>
+                    <li>Low (L)</li>
+                </ul>
+                <p class="govuk-body">We expect most business cases will fall within the scope of Secure by Design.</p>
+
+                <h2 class="govuk-heading-l">Additional criteria</h2>
+                <p class="govuk-body">If you are developing a service that must meet the service standard. You can <a href="https://www.gov.uk/service-manual/service-assessments/check-if-need-to-meet-service-standard" class="govuk-link">check if you need to meet the Service Standard or get an assessment</a>.</p>
             </div>
         </div>
     </div>
 {% endblock %}
+

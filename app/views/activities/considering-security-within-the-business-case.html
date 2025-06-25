@@ -1,51 +1,17 @@
 {% extends "layouts/full.html" %}
 
-{% set selectedNav = "Secure by Design" %}
-{% set pageName = "Considering security within the business case" %}
-{% set seoPageName = "Considering security within the business case" %}
-{% set pageDescription = "You must include cyber security requirements in your business case. This helps make sure the appropriate funding, resources, skills and time are allocated to manage cyber security risks."%}
+{% set serviceNav = "Activities" %}
+{% set path = "activities/considering-security-within-the-business-case" %}
+{% set title = "Considering security within the business case" %}
+{% set description = "You must include cyber security requirements in your business case. This helps make sure the appropriate funding, resources, skills and time are allocated to manage cyber security risks." %}
 
-{% block hero %}
-<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
-   <div class="govuk-width-container">
-       <div class="govuk-service-navigation__container">
-           <span class="govuk-service-navigation__service-name">
-               <a href="/secure-by-design/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
-               Secure by Design
-           </a>
-           </span>
-           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
-               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden="">
-               Menu
-           </button>
-               <ul class="govuk-service-navigation__list" id="navigation">
-                   <li class="govuk-service-navigation__item">
-                       <a class="govuk-service-navigation__link" href="/secure-by-design/what-is-secure-by-design">Introduction</a>
-                   </li>
-                   <li class="govuk-service-navigation__item ">
-                       <a class="govuk-service-navigation__link" href="/secure-by-design/roles-and-responsibilities">Roles and responsibilities</a>
-                   </li>
-                   <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
-                     <a class="govuk-service-navigation__link" aria-current="page" href="/secure-by-design/activities">Activities</a>
-                  </li>
-                  <li class="govuk-service-navigation__item ">
-                     <a class="govuk-service-navigation__link" href="/secure-by-design/get-support">Get support</a>
-                  </li>
-               </ul>
-           </nav>
-       </div>
-   </div>
-</section>
-{% endblock %}
 {% block content %}
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-three-quarters">
                 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
                 <span class="govuk-caption-xl govuk-!-margin-top-1">Activities</span>
-                <h1 class="govuk-heading-xl govuk-!-margin-top-5">
-                    {% if seoPageName %}{{seoPageName}}
-                    {% else %}{{pageName}}{%endif%}</h1>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{title}}</h1>
                 <p class="govuk-body">This activity must be performed during the following phases:</p>
                 <a href="discovery-activities"><strong class="govuk-tag govuk-tag--purple">Discovery</strong></a>
                 <a href="alpha-activities"><strong class="govuk-tag govuk-tag--yellow">Alpha</strong></a>

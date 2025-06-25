@@ -1,36 +1,100 @@
 {% extends "layouts/full.html" %}
 
-{% set selectedNav = "Cyber and information security" %}
-{% set pageName = "Cyber and information security manual" %}
-{% set pageDescription = "Enabling the Department for Education (DfE) to make informed risk based decisions."%}
-
+{% set serviceNav = "Home" %}
+{% set path = "" %}
+{% set title = "Secure by Design" %}
+{% set description = "As of 31 January 2025 all DfE projects and services that go through Cabinet Office spend control process must follow Secure by Design (SbD)." %}
 {% block content %}
-    <section class="govuk-!-padding-bottom-9 govuk-!-margin-top-0">
-        <div class="govuk-width-container">
+<section>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <h1 class="govuk-heading-xl govuk-!-font-size-80 govuk-!-margin-top-5" style="color: #003a69; font-size: 64px;">
+                  {{title}}
+                </h1>
+                <p class="govuk-body-l" style="margin-bottom: 0;">
+                  {{description}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    <div class="govuk-width-container govuk-!-margin-top-9">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Introducing Secure by Design</h2>
+                <p>SbD has been developed by the Government Digital Service (GDS) and a cross-government working group in collaboration with the Government Security Group, National Cyber Security Centre (NCSC) and industry experts.</p>
+            
+                <div class="dfe-grid-container">
 
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-three-quarters">
-                    <h2 class="govuk-heading-l">Services and resources to support your work</h2>
-                    <p class="govuk-body">This space will be evolving over the coming months to bring together the services and activities required to enable the department to make informed security risk decisions, promote good security behaviours through education and safeguard the department's data and services.</p>
-                    <p class="govuk-body">We do this by:</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>ensuring leadership understands the significant cyber risks, and coordinating efforts to reduce these risks</li>
-                        <li>supporting our services to make better security decisions and run more secure services</li>
-                        <li>enabling DfE to detect, respond to and manage cyber security incidents. Reducing impact through early detection and containment</li>
-                    </ul>
-                    <div class="dfe-grid-container govuk-!-margin-top-9">
-                        <div class="dfe-card">
-                           <div class="dfe-card-container">
-                              <h3 class="govuk-heading-m">
-                                 <a href="/secure-by-design" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Secure by Design</a>
-                              </h3>
-                              <p class="govuk-body">Find out more about Secure by Design and what it means for DfE teams.</p>
-                           </div>
+                    <div class="dfe-card">
+                        <img src="/assets/images/what-is-sbd.png" alt="" class="dfe-card-image">
+                        <div class="dfe-card-container">
+                            <h3 class="govuk-heading-m"><a href="/introduction/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">What is Secure by Design?</a></h3>
+                            <p class="govuk-body">Find out more about SbD.</p>
                         </div>
+                    </div>
+                    <div class="dfe-card">
+                        <img src="/assets/images/who-is-in-scope.png" alt="" class="dfe-card-image">
+                        <div class="dfe-card-container">
+                            <h3 class="govuk-heading-m"><a href="/introduction/understanding-if-your-project-should-be-included" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Understanding if your project should be included</a></h3>
+                            <p class="govuk-body">What SbD means for DfE and who is included.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="govuk-grid-row split-panel govuk-!-margin-top-9" style="background: #f3f2f1;">
+                    <div class="govuk-grid-column-one-half text-column">
+                        <h2 class="govuk-heading-l govuk-!-margin-top-3">Roles and responsibilities</h2>
+                        <p class="govuk-body">Ensure risks are mitigated by assigning cyber security responsibilities across your team.</p>
+                        <p class="govuk-!-margin-bottom-0">
+                            <a href="/roles-and-responsibilities/">Learn more</a>
+                        </p>
+                    </div>
+                    <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/assets/images/roles-and-responsibilities.png');"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+     <section style="background-color:#f0f4f5;" class="govuk-!-padding-top-9  govuk-!-padding-bottom-9 govuk-!-margin-top-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+                <div class="govuk-grid-column-three-quarters">
+                    <h2 class="govuk-heading-xl" style="color: #003A69;">Secure by Design activities</h2>
+                    <p class="govuk-body">Find out about the activities you'll need to do in each phase of development and how to track your progress.</p>
+                    <p class="govuk-body govuk-!-font-weight-bold">
+                        <a href="/activities" class="govuk-link">Find out more</a>
+                    </p>
 
+                </div>
+                <div class="govuk-grid-column-one-quarter">
+                    <img src="/assets/images/tracking-progress.svg" alt="" class="govuk-!-margin-top-5 roadmap-icon" style="width: 70%; float: right;">
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="govuk-!-margin-top-7">
+        <div class="dfe-width-container">
+           <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                 <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
+                    <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
+                       <div class="govuk-grid-column-one-half text-column">
+                          <h2 class="govuk-heading-l govuk-!-margin-top-3">Get support</h2>
+                          <p class="govuk-body">Support available for SbD.</p>
+                          <p class="govuk-!-margin-bottom-0">
+                             <a href="/get-support">Ask for support</a>
+                          </p>
+                       </div>
+                       <div class="govuk-grid-column-one-half image-column">
+                          <div class="image-container" style="background-image: url('/assets/images/support.png');"></div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
 {% endblock %}
