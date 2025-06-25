@@ -1,9 +1,9 @@
-{% extends "layouts/full-nohero.html" %}
+{% extends "layouts/full.html" %}
 
-{% set pageName = "Site map" %}
-{% set pageDescription = "Site map for the DfE Cyber and information security manual." %}
-{% set selectedNav = "" %}
-{% set lastUpdated = "14 May 2025"%}
+{% set serviceNav = "Home" %}
+{% set path = "site-map" %}
+{% set title = "Site map" %}
+{% set description = "Site map for the DfE Cyber and information security manual." %}
 
 {% block content %}
 
@@ -21,7 +21,7 @@
 
   <section style="background-color:#ffffff;" class="govuk-!-margin-top-0 govuk-!-margin-bottom-9">
     <div class="govuk-width-container">
-      <div class="govuk-grid-row">
+      <!-- <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
           <h2 class="govuk-heading-l">Cyber and information security</h2>
           <div class="govuk-grid-row">
@@ -34,13 +34,13 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="govuk-grid-row govuk-!-margin-top-9">
         <div class="govuk-grid-column-full">
           <h2 class="govuk-heading-l">Secure by Design</h2>
           <ul class="govuk-list govuk-list--bullet">
             <li>
-              <a href="/secure-by-design/" class="govuk-link">Home</a>
+              <a href="/" class="govuk-link">Home</a>
             </li>
           </ul>
           <div class="govuk-grid-row govuk-!-margin-top-9">
@@ -48,10 +48,10 @@
               <h3 class="govuk-heading-m">Introduction</h3>
               <ul class="govuk-list govuk-list--bullet">
                 <li>
-                  <a href="/secure-by-design/what-is-secure-by-design" class="govuk-link">What is Secure by Design?</a>
+                  <a href="/introduction/" class="govuk-link">What is Secure by Design?</a>
                 </li>
                 <li>
-                  <a href="/secure-by-design/understanding-if-your-project-should-be-included" class="govuk-link">Understanding if your project should be included</a>
+                  <a href="/introduction/understanding-if-your-project-should-be-included" class="govuk-link">Understanding if your project should be included</a>
                 </li>
               </ul>
             </div>
@@ -59,13 +59,13 @@
               <h3 class="govuk-heading-m">Roles and responsibilities</h3>
               <ul class="govuk-list govuk-list--bullet">
                 <li>
-                  <a href="/secure-by-design/roles-and-responsibilities/" class="govuk-link">Roles and responsibilities</a>
+                  <a href="/roles-and-responsibilities/" class="govuk-link">Roles and responsibilities</a>
                   <ul class="govuk-list govuk-list--bullet">
                     <li>
-                      <a href="/secure-by-design/roles-and-responsibilities/how-to-agree-roles-and-responsibilities" class="govuk-link">How to agree roles and responsibilities</a>
+                      <a href="/roles-and-responsibilities/how-to-agree-roles-and-responsibilities" class="govuk-link">How to agree roles and responsibilities</a>
                     </li>
                     <li>
-                      <a href="/secure-by-design/roles-and-responsibilities/how-we-will-help-you" class="govuk-link">How we will help you implement Secure by Design</a>
+                      <a href="/roles-and-responsibilities/how-we-will-help-you" class="govuk-link">How we will help you implement Secure by Design</a>
                     </li>
                   </ul>
                 </li>
@@ -81,25 +81,25 @@
               <h3 class="govuk-heading-m">Activities</h3>
               <ul class="govuk-list govuk-list--bullet">
                 <li>
-                  <a href="/secure-by-design/activities" class="govuk-link">Activities</a>
+                  <a href="/activities" class="govuk-link">Activities</a>
                 </li>
                 <li>
-                  <a href="/secure-by-design/activities/discovery-activities" class="govuk-link">Discovery activities</a>
+                  <a href="/activities/discovery-activities" class="govuk-link">Discovery activities</a>
                 </li>
                 <li>
-                  <a href="/secure-by-design/activities/alpha-activities" class="govuk-link">Alpha activities</a>
+                  <a href="/activities/alpha-activities" class="govuk-link">Alpha activities</a>
                 </li>
                 <li>
-                  <a href="/secure-by-design/activities/private-beta-activities" class="govuk-link">Private beta activities</a>
+                  <a href="/activities/private-beta-activities" class="govuk-link">Private beta activities</a>
                 </li>
                 <li>
-                  <a href="/secure-by-design/activities/public-beta-and-live-activities" class="govuk-link">Public beta and live activities</a>
+                  <a href="/activities/public-beta-and-live-activities" class="govuk-link">Public beta and live activities</a>
                 </li>
                 <li>
-                  <a href="/secure-by-design/activities/all-activities" class="govuk-link">All activities</a>
+                  <a href="/activities/all-activities" class="govuk-link">All activities</a>
                   <ul class="govuk-list govuk-list--bullet">
                     <li>
-                      <a href="/secure-by-design/activities/tracking-secure-by-design-progress" class="govuk-link">Tracking Secure by Design progress</a>
+                      <a href="/activities/tracking-secure-by-design-progress" class="govuk-link">Tracking Secure by Design progress</a>
                     </li>
                     <!-- <li>
                       <a href="#" class="govuk-link"></a>
@@ -112,7 +112,7 @@
               <h3 class="govuk-heading-m">Get support</h3>
               <ul class="govuk-list govuk-list--bullet">
                 <li>
-                  <a href="/secure-by-design/get-support" class="govuk-link">Get support</a>
+                  <a href="/get-support" class="govuk-link">Get support</a>
                 </li>
               </ul>
             </div>
