@@ -1,6 +1,5 @@
-{{ govukHeader({
-"rebrand": "true",
-"showNav": "true",
+{{ header({
+"showNav": "false",
 "showSearch": "true",
 "showHeaderActionLinks": "false",
 "logoPath": "assets/images",
@@ -17,7 +16,7 @@
 "primaryLinks": [
 {
 "url" : "/",
-"label" : "Home"
+"label" : "Secure by Design"
 }, {
 "url" : "/introduction",
 "label" : "Introduction"
@@ -34,3 +33,12 @@
 ]
 })
 }}
+
+<style>
+.dfe-header__container {
+    padding-bottom: 16px;
+}
+.dfe-header__service-name {
+    margin-bottom: 0;
+}
+</style>
