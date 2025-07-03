@@ -16,48 +16,18 @@
                 <a href="alpha-activities"><strong class="govuk-tag govuk-tag--yellow">Alpha</strong></a>
                 <a href="private-beta-activities"><strong class="govuk-tag govuk-tag--blue">Private beta</strong></a>
                 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-                <p>Threat modelling is a proactive approach to identifying, understanding, and mitigating potential security threats before they can be exploited. This guidance outlines the key stages of the threat modelling journey, helping you understand why it’s essential, when to conduct it, and who should be involved. Whether you're designing a new system or reviewing an existing one, threat modelling enables informed decision-making and strengthens your overall security posture.</p>
-                <h2 class="govuk-heading-l">DfE threat modelling journey</h2>
-                <ol class="govuk-list govuk-list--number">
-                    <li>Complete the 'Introduction to threat modelling' to understand key dependencies</li>
-                    <li>Understand the threat modelling process and prepare key dependencies:</li>
-                        <ol class="govuk-list govuk-list--bullet">
-                            <li>Identify a project threat modelling lead and where necessary conduct threat modelling training</li>
-                            <li>Produce design documentation</li>
-                            <li>Produce a system, service asset register (physical/informational)</li>
-                            <li>Conduct Threat assessment analysis</li>
-                        </ol>
-                    <li>Complete the 'Advanced threat modelling' training, review the threat modelling playbook.</li>
-                    <li>Organise and prepare for a series of threat modelling workshops.</li>
-                </ol>
-
-                <h2 class="govuk-heading-l">Why do we need to threat model?</h2>
-                <p class="govuk-body">Threat modelling can identify potential attack routes on a system or service.</p>
+                <p class="govuk-body">Threat modelling identifies potential attack routes on a system or service.</p>
                 <p class="govuk-body">This is important as it allows delivery teams to:</p>
                 <ul class="govuk-list govuk-list--bullet">
                     <li>address emerging threats</li>
-                    <li>better understand and mitigate the threats/risks to their systems and services</li>
-                    <li>determine appropriate security controls and measures to manage threats/risks in line with business needs</li>
+                    <li>better understand and articulate the risk posed to their systems and services</li>
+                    <li>determine appropriate security controls and measures to manage risks in line with business needs</li>
                     <li>verify the effectiveness and adequacy of existing security controls</li>
                 </ul>
                 <p class="govuk-body">This improves the resilience of digital projects, services and systems throughout their lifespan.</p>
 
-                <h2 class="govuk-heading-l">When should I conduct threat modelling?</h2>
-                <p class="govuk-body">You must do threat modelling during the:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>service design and build phase</li>
-                    <li>alpha phase, and no later than private beta phase</li>
-                </ul>
-
-                <p class="govuk-body">You should also review threat models:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>after a security incident</li>
-                    <li>when the threat landscape changes. Usually informed through the Threat Intelligence (TI) reporting and Threat assessment updates from the Cyber Threat Intelligence (CTI) team</li>
-                    <li>when significant system changes are planned</li>
-                </ul>
-
-                <h2 class="govuk-heading-l">Who should be involved in threat modelling activities?</h2>
-                <p class="govuk-body">Running a threat modelling workshop is the recommended way to conduct threat modelling. Teams should follow the DfE threat modelling process and playbook to guide these workshop activities. Teams should appoint an appropriate person to lead the threat modelling activity.</p>
+                <h2 class="govuk-heading-l">Who is involved in threat modelling?</h2>
+                <p class="govuk-body">Teams should appoint an appropriate person to lead the threat modelling activity.</p>
                 <p class="govuk-body">These include, but are not limited to your:</p>
                 <ul class="govuk-list govuk-list--bullet">
                     <li>Information Security Officer (ISO)</li>
@@ -65,17 +35,66 @@
                     <li>Security architect</li>
                     <li>Penetration tester</li>
                     <li>Governance, risk and consultancy (GRC) specialist consultant</li>
-                    <li>External Security consultant</li>
+                    <li>Security consultant with experience of threat modelling</li>
                 </ul>
-
+                <p class="govuk-body">Running a threat modelling workshop is the recommended way to conduct threat modelling. Teams should follow the DfE threat modelling process and playbook to guide these workshop activities. Guidance for this is currently in development.</p>
                 <p class="govuk-body">You should involve as many stakeholders as possible in your threat modelling workshop. This includes:</p>
                 <ul class="govuk-list govuk-list--bullet">
                     <li>your development / DevOps teams</li>
                     <li>technical and security architects</li>
-                    <li>your Senior Responsible Owner (SRO) / Service Owner (SO)</li>
+                    <li>your Senior Responsible Owner (SRO) / service owner</li>
                 </ul>
 
-                <p>You are encouraged to use the training and guidance provided by the Cyber and Information Security Division (CISD) Security Architecture (SecArch) team to train prior to conducting threat modelling, who are also able to provide consultation and advice on threat modelling.</p>
+                <p class="govuk-body">You are encouraged to use the training and guidance provided by the Cyber and Information Security Division (CISD) Security Architecture (SecArch) team to train prior to conducting threat modelling.</p>
+
+                <h2 class="govuk-heading-l">When should I conduct threat modelling?</h2>
+                <p class="govuk-body">You must do threat modelling during the:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>service design and build phase</li>
+                    <li>alpha phase, and no later than private beta phase</li>
+                </ul>
+                <p class="govuk-body">You also need to review threat models:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>when it makes sense for the digital project or service and business importance</li>
+                    <li>after a security incident</li>
+                    <li>when the threat landscape changes, including when a new DfE Threat Assessment is released</li>
+                    <li>when significant system changes are planned</li>
+                </ul>
+
+                <h2 class="govuk-heading-l">How is threat modelling conducted?</h2>
+                <p class="govuk-body">Threat modelling involves:</p>
+                <ol class="govuk-list govuk-list--number">
+                    <li>Documenting your system end-to-end, focusing on key components and data flow.</li>
+                    <li>Understanding potential system failures, component vulnerabilities and exploitation risks.</li>
+                    <li>Using this knowledge to mitigate threats via a variety of treatment options. For example, system redesign, implementation of proportionate security controls, or ceasing high risk activities.</li>
+                </ol>
+                <p class="govuk-body">We encourage you to use a recommended threat modelling approach. This should reflect the scale, complexity and importance of your digital project or service, and the technologies used.</p>
+                <p class="govuk-body">These approaches include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>the STRIDE-LM (Spoofing, Tampering, Non-Repudiation, Information Disclosure, Denial of Service, Escalation of Privilege, Lateral Movement) threat taxonomy for identifying and understanding types of threats</li>
+                    <li>the MITRE ATT&CK framework to explore attack modelling and vulnerabilities that may apply to your service</li>
+                    <li>attack trees for modelling attack pathways</li>
+                    <li>the Lockhead Martin Kill chain to understand the cyber-attack lifecycle</li>
+                </ul>
+                <p class="govuk-body">You should analyse threats with enough details for informed, risk-based decision making.</p>
+                <p class="govuk-body">Your team should confirm threat models as part of their SbD continuous improvement.</p>
+                <p class="govuk-body">This is to:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>ensure alignment to SbD principles</li>
+                    <li>check the robustness of the threat modelling approach</li>
+                    <li>verify the correctness of the final output</li>
+                </ul>
+                <p class="govuk-body">Validation should be conducted by individuals not involved in creation of the original threat model.</p>
+                <h2 class="govuk-heading-l">Further reading</h2>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link" href="https://www.gov.uk/government/publications/secure-connected-places-playbook-documents/conducting-a-stride-based-threat-analysis" rel="noreferrer noopener" target="_blank">Conducting a STRIDE-based threat analysis - GOV.UK (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://attack.mitre.org/" rel="noreferrer noopener" target="_blank">MITRE ATT&CK (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://www.ncsc.gov.uk/collection/risk-management/using-attack-trees-to-understand-cyber-security-risk" rel="noreferrer noopener" target="_blank">Attack Trees - NCSC (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://catalog.workshops.aws/threatmodel/en-US/what-can-go-wrong/threat-grammar" rel="noreferrer noopener" target="_blank">Amazon Web Services Threat Grammar (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/performing-threat-modelling/" rel="noreferrer noopener" target="_blank">Performing threat modelling - Government security (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://shostack.org/resources/threat-modeling" rel="noreferrer noopener" target="_blank">The Ultimate Beginners Guide to Threat modelling -  Adam Shostack (Opens in new tab)</a></li>
+                    <li><a class="govuk-link" href="https://learn.microsoft.com/en-us/training/modules/tm-introduction-to-threat-modeling/" rel="noreferrer noopener" target="_blank">Threat Modelling training (STRIDE) - Microsoft (Opens in new tab)</a></li>
+                </ul>
             </div>
         </div>
     </div>
