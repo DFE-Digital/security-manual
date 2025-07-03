@@ -1,9 +1,9 @@
-{% from 'header/macro.njk' import header %}
+{% from "header/macro.njk" import header %}
 {% from 'govuk/components/footer/macro.njk' import govukFooter %}
 {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
 <!DOCTYPE html>
-<html lang="en" class="govuk-template__body">
+<html lang="en" class="govuk-template--rebranded">
 
 <head>
     <meta charset="utf-8">
@@ -33,7 +33,7 @@
     {% block header %}
 
     {% include 'layouts/_header.html'%}
-    <section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init>
+    <section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation" data-govuk-service-navigation-init="">
       <div class="govuk-width-container">
           <div class="govuk-service-navigation__container">
               <span class="govuk-service-navigation__service-name">
@@ -42,9 +42,7 @@
                 </a>
               </span>
               <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
-                  <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden=>
-                  Menu
-              </button>
+                <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden> Menu </button>
                   <ul class="govuk-service-navigation__list" id="navigation">
                     <li class="govuk-service-navigation__item {% if serviceNav == 'Introduction' %}govuk-service-navigation__item--active{% endif %}">
                       <a class="govuk-service-navigation__link" href="/introduction/">Introduction</a>
@@ -63,6 +61,7 @@
           </div>
       </div>
     </section>
+
 
     {% endblock %}
 
